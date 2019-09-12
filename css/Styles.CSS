@@ -1096,7 +1096,3 @@ div.event_desc p b {
         width: calc(60% - 30px);
     }
 }
-
-@media all and (min-width: 1200px) {
-    
-}
