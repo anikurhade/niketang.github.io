@@ -2,6 +2,65 @@
 <html>
 	<head>
 		<title>COMeIT - Home</title>
+		<style>
+			
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+			
+/*Navigation Bar*/
+.navbar {
+    padding-bottom: 25px;
+}
+
+ul {
+    z-index: 3;
+    width: 100%;
+    position: fixed;
+    background-color: transparent;
+    list-style-type: none;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+ul:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+.sticky {
+    background-color: black;
+    color: white;
+}
+
+.toggle {
+    margin-right: 200px;
+}
+
+.menu li :not(.logo) {
+    font-size: 20px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.logo {
+    padding: 15px 0px;
+    transition: 0.2s linear;
+    line-height: 80px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 50px;
+}
+
+			
+		</style>
 	</head>
 <body>
   <div class="navbar">
