@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--Designed By Niketan Gulekar for COMeIT
-        Copyright 2019. All Rights Reserved
-        Github Profile : https://github.com/NiketanG/
-        Github Repo : https://github.com/NiketanG/COMEIT_RegistrationApp
--->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>COMeIT - Home</title>
-    <link rel="stylesheet" href="css/main.css">
-
-    <style>
-        #img {
-                width: 125px;
-                height: 125px;
-            }
-    </style>
-</head>
-
+<html>
+	<head>
+		<title>COMeIT - Home</title>
+	</head>
 <body>
-            <img src="Pictures/money.png" alt="Competitions" id="#img">
-            
+  <div class="navbar">
+            <ul class="menu" id="nav">
+                <li class="logo" onclick="window.location.href = 'home.HTML';">COMeIT</li>
+                <li class="item" onclick="window.location.href = 'Events.HTML';">Events</li>
+                <li class="item" onclick="window.location.href = 'main.HTML';">Register</li>
+                <li class="item" onclick="window.location.href = 'ContactUS.HTML';">Contact Us</li>
+                <li class="toggle" onclick="toggle()">
+                    <div><i class="fas fa-bars"></i></div>
+                </li>
+            </ul>
+        </div>
 </body>
-
 </html>
