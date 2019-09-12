@@ -16,47 +16,15 @@
     <script src="Script.js"></script>
 
     <style>
-        div.container_box {
-            position: relative;
-            top: 180px;
-            width: 50%;
-            margin-left: 50%;
-            transform: translate(-50%, 0%);
-        }
-
-        div.container_box div.container-item {
-            margin: 10px;
-            float: left;
-            width: calc(50% - 20px);
-            height: 125px;
-            background-color: #282828;
-            color: white;
-        }
-
-        div.container_box div.container-item:first-child,
-        div.container_box div.container-item:last-child {
-            background-color: #414141;
-        }
-
-        div.container_box div.container-item img {
-            width: 20%;
-            float: left;
-            margin-left: 12.5%;
-            margin-top: 80px;
-            transform: translateY(-75%);
-        }
-
-        div.container_box div.container-item div.text-block {
-            width: 50%;
-            margin-left: 50%;
-            margin-top: 75px;
-            height: auto;
-            transform: translateY(-80%);
-        }
+        #img {
+                width: 125px;
+                height: 125px;
+            }
     </style>
 </head>
 
 <body>
+       
     <div class="loader">
         <div class="box">
             <div class="b b1"></div>
@@ -75,6 +43,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
 
     <div class="content">
+            <img> id="img" src="Pictures/participant.png">
+            
         <div class="navbar">
             <ul class="menu" id="nav">
                 <li class="logo" onclick="window.location.href = 'home.HTML';">COMeIT</li>
