@@ -1,5 +1,4 @@
 window.onload = function load() {
-    NavBarPos();
     //Preloader 
     setTimeout(() => {
         $('.loader').fadeOut(500);
@@ -9,7 +8,6 @@ window.onload = function load() {
 function loadform() {
     selectlist();
     setgrp();
-    event_check();
 }
 
 function selectlist() {
@@ -92,123 +90,126 @@ window.onscroll = function () {
     NavBarPos();
 }
 
-function NavBarResize() {
-    var x = document.getElementById("topnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-
 function NavBarPos() {
     if (Math.max(document.body.scrollTop, window.pageYOffset) >= 60) {
-        document.getElementsByClassName("menu")[0].classList.add("sticky");
-        document.getElementsByClassName("logo")[0].style.lineHeight = "40px";
-        document.getElementsByClassName("logo")[0].style.fontSize = "20px";
-        document.getElementById("totop").style.display = "block";
-        $("ul").css("background-color", "black");
-        $("ul").css("color", "white");
+        $(".menu").addClass("sticky");
+        $(".logo").css({
+            "lineHeight": "40px",
+            "fontSize": "20px"
+        });
+        $("#totop").show();
+        $("ul").css({
+            "background-color": "black",
+            "color": "white"
+        });
     } else {
-        document.getElementById("nav").classList.remove("sticky");
-        document.getElementsByClassName("logo")[0].style.lineHeight = "80px";
-        document.getElementsByClassName("logo")[0].style.fontSize = "25px";
-        document.getElementById("totop").style.display = "none";
-
+        $(".menu").removeClass("sticky");
+        $(".logo").css({
+            "lineHeight": "80px",
+            "fontSize": "25px"
+        });
+        $("#totop").hide();
         if (($(".item").hasClass("active"))) {
-            document.getElementsByClassName("navbar")[0].style.paddingBottom = "145px";
-            $("ul").css("background-color", "black");
-            $("ul").css("color", "white");
+            $(".navbar").css("paddingBottom", "145px");
+            $("ul").css({
+                "background-color": "black",
+                "color": "white"
+            });
         } else {
-            document.getElementsByClassName("navbar")[0].style.paddingBottom = "25px";
-            $("ul").css("background-color", "transparent");
-            $("ul").css("color", "black");
+            $(".navbar").css("paddingBottom", "25px");
+            $("ul").css({
+                "background-color": "transparent",
+                "color": "black"
+            });
         }
-
     }
 }
 
 function toggle() {
     if ($(".item").hasClass("active")) {
         $(".item").removeClass("active");
-        $(".menu").find("div").html("<i class='fas fa-bars'></i>");
+        $(".menu .toggle img").toggle();
         if (Math.max(document.body.scrollTop, window.pageYOffset) <= 60) {
-            $("ul").css("background-color", "transparent");
-            $("ul").css("color", "black");
+            $("ul").css({
+                "background-color": "transparent",
+                "color": "black"
+            });
             $(".navbar").css("paddingBottom", "25px");
         }
     } else {
         $(".item").addClass("active");
-        $(".menu").find("div").html("<i class='fas fa-times'></i>");
+        $(".menu .toggle img").toggle();
         if (Math.max(document.body.scrollTop, window.pageYOffset) <= 60) {
-            $("ul").css("background-color", "black");
-            $("ul").css("color", "white"); 
+            $("ul").css({
+                "background-color": "black",
+                "color": "white"
+            });
             $(".navbar").css("paddingBottom", "145px");
         }
     }
 }
 
 function validate_name() {
-    var name = document.getElementById("name").value;
+    var name = $("#name").val();
     var re_name = /^[A-Za-z ]/;
     if (name.length < 1) {
-        document.getElementById("name_vb").style.display = 'block';
+        $("#name_vb").show();
         return false;
     } else if ((name.length > 0) && ((re_name.test(name) == false))) {
-        document.getElementById("name_v").style.display = 'block';
-        document.getElementById("name_vb").style.display = 'none';
+        $("#name_v").show();
+        $("#name_vb").hide();
         return false;
     } else if ((re_name.test(name)) || (name.length < 1)) {
-        document.getElementById("name_v").style.display = 'none';
-        document.getElementById("name_vb").style.display = 'none';
+        $("#name_v").hide();
+        $("#name_vb").hide();
         return true;
     }
 }
 
 function validate_email() {
     blank_check();
-    var email = document.getElementById("email").value;
+    var email = $("#email").val();
     var re_email = /(^\w)*[@](\w)*(\.)(\w)*/;
     if (email.length < 1) {
-        document.getElementById("email_vb").style.display = 'block';
+        $("#email_vb").show();
         return false;
     } else if ((email.length > 0) && ((re_email.test(email) == false))) {
-        document.getElementById("email_v").style.display = 'block';
-        document.getElementById("email_vb").style.display = 'none';
+        $("#email_v").show();
+        $("#email_vb").hide();
         return false;
     } else if ((re_email.test(email)) || (email.length < 1)) {
-        document.getElementById("email_v").style.display = 'none';
-        document.getElementById("email_vb").style.display = 'none';
+        $("#email_v").hide();
+        $("#email_vb").hide();
         return true;
     }
 }
 
 function validate_phno() {
     blank_check();
-    var phno = document.getElementById("PhNo").value;
+    var phno = $("#PhNo").val();
     var re_phno = /^\d{10}$/;
     if (phno.length < 1) {
-        document.getElementById("phone_vb").style.display = 'block';
+        $("#phone_vb").show();
         return false;
     } else if ((phno.length > 0) && ((re_phno.test(phno) == false))) {
-        document.getElementById("phone_v").style.display = 'block';
-        document.getElementById("phone_vb").style.display = 'none';
+        $("#phone_v").show();
+        $("#phone_vb").hide();
         return false;
     } else if ((re_phno.test(phno)) || (phno.length < 1)) {
-        document.getElementById("phone_v").style.display = 'none';
-        document.getElementById("phone_vb").style.display = 'none';
+        $("#phone_v").hide();
+        $("#phone_vb").hide();
         return true;
     }
 }
 
 function validate_clg() {
     blank_check();
-    var clgname = document.getElementById("ClgName").value;
+    var clgname = $("#ClgName").val();
     if (clgname.length < 1) {
-        document.getElementById("clg_vb").style.display = 'block';
+        $("#clg_vb").show();
         return false;
     } else if (clgname.length > 0) {
-        document.getElementById("clg_vb").style.display = 'none';
+        $("#clg_vb").hide();
         return true;
     }
 }
@@ -217,12 +218,12 @@ function setgrp() {
     var checkedrdbtn = document.querySelector('input[name="radio_team"]:checked').value;
 
     if (checkedrdbtn == "solo") {
-        for (let el of document.querySelectorAll('.grp')) el.style.display = 'none';
-        document.getElementById("GrpName").disabled = true;
+        $(".grp").hide();
+        $("#GrpName").attr("disabled", true);
 
     } else {
-        for (let el of document.querySelectorAll('.grp')) el.style.display = 'block';
-        document.getElementById("GrpName").disabled = false;
+        $(".grp").show();
+        $("#GrpName").attr("disabled", false);
     }
 }
 
@@ -233,12 +234,12 @@ function validate_grp() {
     if (checkedrdbtn == "solo") {
         return true;
     } else {
-        var grpname = document.getElementById("GrpName").value;
+        var grpname = $("#GrpName").val();
         if (grpname.length < 1) {
-            document.getElementById("group_vb").style.display = 'block';
+            $("#group_vb").show();
             return false;
         } else if (grpname.length > 0) {
-            document.getElementById("group_vb").style.display = 'none';
+            $("#group_vb").hide();
             return true;
         }
     }
@@ -250,21 +251,21 @@ function blank_check() {
     var checkedrdbtn = document.querySelector('input[name="radio_team"]:checked').value;
 
     if ((x == "") && (checkedrdbtn == "solo")) {
-        document.getElementById("registerbtn").disabled = true;
+        $("#registerbtn").attr("disabled", true);
         return false;
     } else {
-        document.getElementById("registerbtn").disabled = false;
+        $("#registerbtn").attr("disabled", false);
         return true;
     }
 }
 
 function event_check() {
-    var e = document.getElementById("events").selectedIndex;
+    var e = $("#events").prop('selectedIndex');
     if ((e == '0')) {
-        document.getElementById("registerbtn").disabled = true;
+        $("#registerbtn").attr("disabled", true);
         return false;
     } else {
-        document.getElementById("registerbtn").disabled = false;
+        $("#registerbtn").attr("disabled", false);
         return true;
     }
 }
@@ -272,37 +273,27 @@ function event_check() {
 function validate() {
     if (validate_name() && event_check() && validate_phno() && validate_email() && validate_clg() && validate_grp() && blank_check()) {
         //Submit Form 
-        document.getElementsByTagName("form")[0].submit();
+        $("form").submit();
         alert("Registration Successful ! :)")
     } else {
         alert("Please check all fields.")
     }
 }
 
-function scrolltoelement(element) {
-    var element = document.getElementById("element");
-    element.scrollIntoView();
-}
-
 function event_desc(event_id) {
     if ($(".event_desc_text:nth-child(" + event_id + ")").is(':hidden')) {
         $(".event_desc").fadeIn("slow");
         $(".event_desc_text").hide();
-        $(".event_desc_text:nth-child(" + event_id + ")").show("500");
+        $(".event_desc_text:nth-child(" + event_id + ")").slideDown("500");
+
+        $('html, body').animate({
+            scrollTop: ($('.event_desc').offset().top) - 100
+        }, 10);
         $(".active_event").hide();
         $("#event_" + event_id).fadeIn("500");
-        $(".event_desc").scrollIntoView();
-
     } else {
-        $(".event_desc_text:nth-child(" + event_id + ")").hide("fast");
-        $(".event_desc").hide();
-        $(".active_event").hide();
+        $(".active_event").slideUp();
+        $(".event_desc").slideUp();
+        $(".event_desc_text:nth-child(" + event_id + ")").hide("300");
     }
 }
-
-//jQuery
-$(document).ready(function(){
-
-    // jQuery methods go here...
-  
-  });

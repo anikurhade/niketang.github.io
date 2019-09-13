@@ -4,10 +4,7 @@ Github Profile : https://github.com/NiketanG/
 Github Repo : https://github.com/NiketanG/COMEIT_RegistrationApp
 */
 
-@font-face {
-    font-family: 'Preload_Montserrat';
-    src: url('fonts/Montserrat-Regular.ttf');
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -106,7 +103,6 @@ footer a {
 }
 
 .ready {
-    font-family: 'Preload_Montserrat' !important;
     color: white;
     text-align: center;
     margin-top: 210px;
@@ -771,8 +767,6 @@ div.stats {
     position: relative;
     margin-left: 50%;
     transform: translate(-50%, 0%);
-    
-    
     width: 100%;
     max-width: 100%;
     text-align: center;
@@ -781,7 +775,7 @@ div.stats {
 .stats div {
     width: 30%;
     text-align: center;
-    
+
     display: inline-block;
     padding: 0;
     margin: 0;
@@ -789,7 +783,7 @@ div.stats {
 
 div.stats h2 {
     text-align: center;
-    font-weight: 100;
+    font-weight: 400;
     margin-bottom: 50px;
     letter-spacing: 10px;
     text-transform: uppercase;
@@ -799,7 +793,7 @@ div.stats h2 {
     border-right: #999 solid 1px;
 }
 
-.stats div img { 
+.stats div img {
     width: 48px;
 }
 
@@ -854,7 +848,7 @@ div.parallax_text {
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
- 
+
     width: 80%;
     left: 50%;
 
@@ -874,15 +868,19 @@ div.parallax_text h2 {
 
 @media all and (min-width: 600px) {
     div.stats {
-        width: 75%; 
+        width: 75%;
         margin-left: 50%;
-        transform: translate(-50%, 0%); 
+        transform: translate(-50%, 0%);
     }
+
     .stats div img {
-         width: 64px;
-    }.stats div h3 { 
+        width: 64px;
+    }
+
+    .stats div h3 {
         font-size: 16px;
     }
+
     .stats div p {
         font-size: 16px;
     }
@@ -890,24 +888,30 @@ div.parallax_text h2 {
 
 @media all and (min-width: 900px) {
     div.stats {
-        width: 50%; 
+        width: 50%;
         margin-left: 50%;
-        transform: translate(-50%, 0%); 
+        transform: translate(-50%, 0%);
     }
+
     .stats div {
         float: left;
         width: 33.33%;
     }
+
     .stats div img {
-         width: 64px;
-    }.stats div h3 { 
+        width: 64px;
+    }
+
+    .stats div h3 {
         font-size: 16px;
     }
+
     .stats div p {
         font-size: 16px;
     }
+
     div.parallax_text {
-        width: 40%; 
+        width: 40%;
         left: 25%;
     }
 }
@@ -932,7 +936,6 @@ div.bgimg img {
     left: -10px;
     position: relative;
     filter: blur(7px);
-    
     object-fit: cover;
 }
 
@@ -944,7 +947,6 @@ div.bgimg h3 {
     font-weight: 100;
     letter-spacing: 5px;
     text-transform: uppercase;
-
     width: 100%;
 }
 
@@ -953,10 +955,8 @@ div.bgimg h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight: 600;
     letter-spacing: 10px;
     text-transform: uppercase;
-
     font-size: 25px;
 }
 
@@ -968,44 +968,40 @@ div.bgimg p {
     transform: translate(-50%, -50%);
     font-weight: 100;
     font-size: 17px;
-    
     color: rgba(255, 255, 255, 0.7);
-
     width: 80%;
 }
 
-div.bgimg i {
+div.bgimg img.arrow {
     bottom: 25px;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    
     animation: bounce 2s ease-in-out infinite;
-
-    font-size: 30px;
+    width: 28px;
+    height: 28px;
+    filter: blur(0px);
 }
 
 @keyframes bounce {
     50% {
-        bottom: 50px;
+        bottom: 75px;
     }
 }
 
 div.gallery {
     top: 100px;
-    position: relative; 
+    position: relative;
     width: 90%;
-    display: block; 
-
+    display: block;
 }
 
 div.gallery div.col {
     margin: 0px 15px;
     height: 250px;
     position: relative;
-
     width: 100%;
-}   
+}
 
 div.col div.img {
     width: 100%;
@@ -1020,10 +1016,12 @@ div.col img {
     margin-left: -10px;
     filter: blur(5px);
     transition: 0.3s ease-in-out;
+    object-fit: cover;
 }
 
 div.col img:hover {
     filter: blur(0px);
+    cursor: pointer;
 }
 
 div.col div.text-block {
@@ -1067,12 +1065,21 @@ div.event_desc p b {
     color: rgba(0, 0, 0, 1);
 }
 
-.active_event {
-    width: 100%;
-    background-color: #37474F;
-    height: 2px;
-    margin: 10px 0px;
-    display: none;
+@media all and (min-width: 600px) {
+    div.gallery {
+        width: 60%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    div.gallery div.col {
+        width: calc(100%);
+    }
+
+    div.event_desc {
+        width: calc(60% - 25px);
+    }
+
 }
 
 /* Desktop menu */
@@ -1080,23 +1087,34 @@ div.event_desc p b {
     div.bgimg p {
         width: 35%;
     }
+
     div.bgimg i {
         font-size: 50px;
     }
+
+
     div.gallery {
         width: 60%;
         display: flex;
         margin-left: 50%;
         transform: translate(-50%, 0%);
     }
+
     div.gallery div.col {
-        width: calc(33.33%);
+        width: calc(33.22222%);
+        float: left;
     }
+
     div.event_desc {
         width: calc(60% - 30px);
     }
 }
 
-@media all and (min-width: 1200px) {
-    
+
+.active_event {
+    width: 100%;
+    background-color: #37474F;
+    height: 2px;
+    display: none;
+    margin: 15px 0px;
 }

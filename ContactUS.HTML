@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="Styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="Script.js"></script>
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>COMeIT Event Registration</title>
-
 </head>
 
 <body>
@@ -24,13 +22,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://kit.fontawesome.com/191afe825b.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
-
     <div class="content">
         <div class="navbar">
             <ul class="menu" id="nav">
@@ -39,20 +30,22 @@
                 <li class="item" onclick="window.location.href = 'Main.HTML';">Register</li>
                 <li class="item" onclick="window.location.href = 'ContactUS.HTML';">Contact Us</li>
                 <li class="toggle" onclick="toggle()">
-                    <div><i class="fas fa-bars"></i></div>
+                    <div>
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMTI0IDEyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI0IDEyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnPgoJPHBhdGggZD0iTTExMiw2SDEyQzUuNCw2LDAsMTEuNCwwLDE4czUuNCwxMiwxMiwxMmgxMDBjNi42LDAsMTItNS40LDEyLTEyUzExOC42LDYsMTEyLDZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDUwSDEyQzUuNCw1MCwwLDU1LjQsMCw2MmMwLDYuNiw1LjQsMTIsMTIsMTJoMTAwYzYuNiwwLDEyLTUuNCwxMi0xMkMxMjQsNTUuNCwxMTguNiw1MCwxMTIsNTB6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDk0SDEyYy02LjYsMC0xMiw1LjQtMTIsMTJzNS40LDEyLDEyLDEyaDEwMGM2LjYsMCwxMi01LjQsMTItMTJTMTE4LjYsOTQsMTEyLDk0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                            style="width: 28px" class="habtn">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMzQ4LjMzMyAzNDguMzM0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDguMzMzIDM0OC4zMzQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48Zz4KCTxwYXRoIGQ9Ik0zMzYuNTU5LDY4LjYxMUwyMzEuMDE2LDE3NC4xNjVsMTA1LjU0MywxMDUuNTQ5YzE1LjY5OSwxNS43MDUsMTUuNjk5LDQxLjE0NSwwLDU2Ljg1ICAgYy03Ljg0NCw3Ljg0NC0xOC4xMjgsMTEuNzY5LTI4LjQwNywxMS43NjljLTEwLjI5NiwwLTIwLjU4MS0zLjkxOS0yOC40MTktMTEuNzY5TDE3NC4xNjcsMjMxLjAwM0w2OC42MDksMzM2LjU2MyAgIGMtNy44NDMsNy44NDQtMTguMTI4LDExLjc2OS0yOC40MTYsMTEuNzY5Yy0xMC4yODUsMC0yMC41NjMtMy45MTktMjguNDEzLTExLjc2OWMtMTUuNjk5LTE1LjY5OC0xNS42OTktNDEuMTM5LDAtNTYuODUgICBsMTA1LjU0LTEwNS41NDlMMTEuNzc0LDY4LjYxMWMtMTUuNjk5LTE1LjY5OS0xNS42OTktNDEuMTQ1LDAtNTYuODQ0YzE1LjY5Ni0xNS42ODcsNDEuMTI3LTE1LjY4Nyw1Ni44MjksMGwxMDUuNTYzLDEwNS41NTQgICBMMjc5LjcyMSwxMS43NjdjMTUuNzA1LTE1LjY4Nyw0MS4xMzktMTUuNjg3LDU2LjgzMiwwQzM1Mi4yNTgsMjcuNDY2LDM1Mi4yNTgsNTIuOTEyLDMzNi41NTksNjguNjExeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                            style="width: 24px;" hidden class="close">
+                    </div>
                 </li>
             </ul>
         </div>
-
         <div class="emailsupport">
             <h3 class="custcare">Get in touch</h3><br>
             <h3 class="emailsupport">Email</h3>
             <p class="emailsupport">info@comeitgpp<br></p>
-
             <br>
             <h3 class="emailsupport">Phone No : </h3>
             <p class="emailsupport">91-020-25559200<br>020-25559219<br></p>
-
             <br>
             <h3 class="emailsupport">Address</h3>
             <p class="emailsupport">Ganeshkhind, University Road,<br>Shivajinagar,Pune-411016, Maharashtra, India.<br>
@@ -61,9 +54,7 @@
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.780518113032!2d73.82976451485753!3d18.538817887398377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf7ac9514abb%3A0x11d0cebbb7eb6392!2sGovernment%20Polytechnic!5e0!3m2!1sen!2sin!4v1566679020564!5m2!1sen!2sin"
                 class="map" allowfullscreen=""></iframe>
-
         </div>
-
         <div class="faq">
             <h3 class="faq">Frequently Asked Questions</h3>
             <br>
@@ -107,10 +98,11 @@
                 <p class="social">Facebook</p>
                 <p class="social">Twitter
             </div>
-        </div> 
+        </div>
 
         <div id="totop">
-            <img src="Pictures/arrow_right.png" onclick="window.scrollTo(0, 0);" />
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAAAsklEQVR42u3V4Q0BQQCEUQ2gSfo49IauRgiJyP0R5EzufQ3svGQ3u1hIkiRJ0k/KkKF5/i7XWgnZ51Ej4Wl+IyGHvNZEyDZj9RCyzBEBAQEBAQEBAQEBAQEBAQHhwyOmamgHfIuQlBOScgLAjK9Q+SPu+Myyqv6LzTd/xvNP5ptvvvnmvzf/bL75s5y/Nt98882fALCpnn8jDNXzRwht818IjfOfCK3z74Tm+ZIkSZL+ugsexKZhBnZnOgAAAABJRU5ErkJggg=="
+                onclick="window.scrollTo(0, 0);" />
         </div>
 
         <footer>

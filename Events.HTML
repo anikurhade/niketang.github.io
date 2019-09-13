@@ -29,11 +29,6 @@
         </div>
     </div>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/191afe825b.js"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
-
     <div class="content">
         <div class="navbar">
             <ul class="menu" id="nav">
@@ -42,33 +37,47 @@
                 <li class="item" onclick="window.location.href = 'Main.HTML';">Register</li>
                 <li class="item" onclick="window.location.href = 'ContactUS.HTML';">Contact Us</li>
                 <li class="toggle" onclick="toggle()">
-                    <div><i class="fas fa-bars"></i></div>
+                    <div>
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMTI0IDEyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI0IDEyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnPgoJPHBhdGggZD0iTTExMiw2SDEyQzUuNCw2LDAsMTEuNCwwLDE4czUuNCwxMiwxMiwxMmgxMDBjNi42LDAsMTItNS40LDEyLTEyUzExOC42LDYsMTEyLDZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDUwSDEyQzUuNCw1MCwwLDU1LjQsMCw2MmMwLDYuNiw1LjQsMTIsMTIsMTJoMTAwYzYuNiwwLDEyLTUuNCwxMi0xMkMxMjQsNTUuNCwxMTguNiw1MCwxMTIsNTB6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDk0SDEyYy02LjYsMC0xMiw1LjQtMTIsMTJzNS40LDEyLDEyLDEyaDEwMGM2LjYsMCwxMi01LjQsMTItMTJTMTE4LjYsOTQsMTEyLDk0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                            style="width: 28px" class="habtn">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMzQ4LjMzMyAzNDguMzM0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDguMzMzIDM0OC4zMzQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48Zz4KCTxwYXRoIGQ9Ik0zMzYuNTU5LDY4LjYxMUwyMzEuMDE2LDE3NC4xNjVsMTA1LjU0MywxMDUuNTQ5YzE1LjY5OSwxNS43MDUsMTUuNjk5LDQxLjE0NSwwLDU2Ljg1ICAgYy03Ljg0NCw3Ljg0NC0xOC4xMjgsMTEuNzY5LTI4LjQwNywxMS43NjljLTEwLjI5NiwwLTIwLjU4MS0zLjkxOS0yOC40MTktMTEuNzY5TDE3NC4xNjcsMjMxLjAwM0w2OC42MDksMzM2LjU2MyAgIGMtNy44NDMsNy44NDQtMTguMTI4LDExLjc2OS0yOC40MTYsMTEuNzY5Yy0xMC4yODUsMC0yMC41NjMtMy45MTktMjguNDEzLTExLjc2OWMtMTUuNjk5LTE1LjY5OC0xNS42OTktNDEuMTM5LDAtNTYuODUgICBsMTA1LjU0LTEwNS41NDlMMTEuNzc0LDY4LjYxMWMtMTUuNjk5LTE1LjY5OS0xNS42OTktNDEuMTQ1LDAtNTYuODQ0YzE1LjY5Ni0xNS42ODcsNDEuMTI3LTE1LjY4Nyw1Ni44MjksMGwxMDUuNTYzLDEwNS41NTQgICBMMjc5LjcyMSwxMS43NjdjMTUuNzA1LTE1LjY4Nyw0MS4xMzktMTUuNjg3LDU2LjgzMiwwQzM1Mi4yNTgsMjcuNDY2LDM1Mi4yNTgsNTIuOTEyLDMzNi41NTksNjguNjExeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                            style="width: 24px;" hidden class="close">
+                    </div>
                 </li>
             </ul>
         </div>
 
         <div class="bgimg">
-            <img src="Pictures/anas-alshanti-feXpdV001o4-unsplash.jpg">
+            <img src="Pictures/christian-wiediger-WkfDrhxDMC8-unsplash.jpg"
+                srcset="Pictures/christian-wiediger-WkfDrhxDMC8-unsplash_min.jpg 480w,Pictures/christian-wiediger-WkfDrhxDMC8-unsplash_med.jpg 960w, Pictures/christian-wiediger-WkfDrhxDMC8-unsplash.jpg 1920w"
+                sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
             <h3>COMeIT Presents</h3>
             <h1>Competitions</h1>
             <p>A series of competitions to challenge your impactful creativity, innovation and skills</p>
-            <i class="fas fa-angle-down" onclick="document.getElementsByClassName('gallery')[0].scrollIntoView();"></i>
+            <img class="arrow"
+                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4="
+                onclick="document.getElementsByClassName('gallery')[0].scrollIntoView();" />
         </div>
 
         <div class="gallery">
+
             <div class="col" onclick="event_desc(1)">
                 <div class="img">
-                    <img src="Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg" alt="">
+                    <img src="Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg"
+                        srcset="Pictures/safar-safarov-LKsHwgzyk7c-unsplash_min.jpg 480w,Pictures/safar-safarov-LKsHwgzyk7c-unsplash_med.jpg 960w, Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg 1920w"
+                        sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
                         <p>Clash of Code</p>
                     </div>
                 </div>
-                <div class="active_event" id="event_1"></i></div>
+                <div class="active_event" id="event_1"></div>
             </div>
 
             <div class="col" onclick="event_desc(2)">
                 <div class="img">
-                    <img src="Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg" alt="">
+                    <img src="Pictures/chris-ried-ieic5Tq8YMk-unsplash.jpg"
+                        srcset="Pictures/chris-ried-ieic5Tq8YMk-unsplash_min.jpg 480w,Pictures/chris-ried-ieic5Tq8YMk-unsplash_med.jpg 960w, Pictures/chris-ried-ieic5Tq8YMk-unsplash.jpg 1920w"
+                        sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
                         <p>Webber</p>
                     </div>
@@ -78,13 +87,18 @@
 
             <div class="col" onclick="event_desc(3)">
                 <div class="img">
-                    <img src="Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg" alt="">
+                    <img src="Pictures/anas-alshanti-feXpdV001o4-unsplash.jpg"
+                        srcset="Pictures/anas-alshanti-feXpdV001o4-unsplash_min.jpg 480w,Pictures/anas-alshanti-feXpdV001o4-unsplash_med.jpg 960w, Pictures/anas-alshanti-feXpdV001o4-unsplash.jpg 1920w"
+                        sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
                         <p>Hotkeys</p>
                     </div>
                 </div>
                 <div class="active_event" id="event_3"></div>
             </div>
+
+            <!--<div class="clearfix"></div>-->
+
         </div>
 
         <br><br><br>
@@ -147,10 +161,13 @@
         </div>
 
         <div class="gallery">
+
             <div class="col" onclick="event_desc(4)">
                 <div class="active_event" id="event_4"></div>
                 <div class="img">
-                    <img src="Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg" alt="">
+                    <img src="Pictures/n-RFId0_7kep4-unsplash.jpg"
+                        srcset="Pictures/n-RFId0_7kep4-unsplash_min.jpg 480w,Pictures/n-RFId0_7kep4-unsplash_med.jpg 960w, Pictures/n-RFId0_7kep4-unsplash.jpg 1920w"
+                        sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
                         <p>Flash</p>
                     </div>
@@ -160,7 +177,9 @@
             <div class="col" onclick="event_desc(5)">
                 <div class="active_event" id="event_5"></div>
                 <div class="img">
-                    <img src="Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg" alt="">
+                    <img src="Pictures/william-bayreuther-hfk6xOjQlFk-unsplash.jpg"
+                        srcset="Pictures/william-bayreuther-hfk6xOjQlFk-unsplash_min.jpg 480w,Pictures/william-bayreuther-hfk6xOjQlFk-unsplash_med.jpg 960w, Pictures/william-bayreuther-hfk6xOjQlFk-unsplash.jpg 1920w"
+                        sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
                         <p>Capture</p>
                     </div>
@@ -170,25 +189,26 @@
             <div class="col" onclick="event_desc(6)">
                 <div class="active_event" id="event_6"></div>
                 <div class="img">
-                    <img src="Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg" alt="">
+                    <img src="Pictures/alex-litvin-MAYsdoYpGuk-unsplash.jpg"
+                        srcset="Pictures/alex-litvin-MAYsdoYpGuk-unsplash_min.jpg 480w,Pictures/alex-litvin-MAYsdoYpGuk-unsplash_med.jpg 960w, Pictures/alex-litvin-MAYsdoYpGuk-unsplash.jpg 1920w"
+                        sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
                         <p>Project Present-ation</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-
-
-        <div id="totop">
-            <img src="Pictures/arrow_right.png" onclick="window.scrollTo(0, 0);" />
+    <div id="totop">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAAAsklEQVR42u3V4Q0BQQCEUQ2gSfo49IauRgiJyP0R5EzufQ3svGQ3u1hIkiRJ0k/KkKF5/i7XWgnZ51Ej4Wl+IyGHvNZEyDZj9RCyzBEBAQEBAQEBAQEBAQEBAQHhwyOmamgHfIuQlBOScgLAjK9Q+SPu+Myyqv6LzTd/xvNP5ptvvvnmvzf/bL75s5y/Nt98882fALCpnn8jDNXzRwht818IjfOfCK3z74Tm+ZIkSZL+ugsexKZhBnZnOgAAAABJRU5ErkJggg=="
+            onclick="window.scrollTo(0, 0);" />
+    </div>
+    <footer>
+        <div id="Copyright">Developed by COMeIT Technical Team - Government Polytechnic Pune. Copyright © 2019 All
+            rights reserved.
         </div>
-
-        <footer>
-            <div id="Copyright">Developed by COMeIT Technical Team - Government Polytechnic Pune. Copyright © 2019 All
-                rights reserved.
-            </div>
-        </footer>
+    </footer>
     </div>
 </body>
 
