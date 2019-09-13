@@ -1,12 +1,8 @@
 window.onload = function load() {
     NavBarPos();
-    //Preloader
-    function hidePreloader() {
-        $('.loader').fadeOut(500);
-    }
-
+    //Preloader 
     setTimeout(() => {
-        hidePreloader();
+        $('.loader').fadeOut(500);
     }, 1000);
 }
 
@@ -132,7 +128,6 @@ function NavBarPos() {
     }
 }
 
-
 function toggle() {
     if ($(".item").hasClass("active")) {
         $(".item").removeClass("active");
@@ -140,15 +135,15 @@ function toggle() {
         if (Math.max(document.body.scrollTop, window.pageYOffset) <= 60) {
             $("ul").css("background-color", "transparent");
             $("ul").css("color", "black");
-            document.getElementsByClassName("navbar")[0].style.paddingBottom = "25px";
+            $(".navbar").css("paddingBottom", "25px");
         }
     } else {
         $(".item").addClass("active");
         $(".menu").find("div").html("<i class='fas fa-times'></i>");
         if (Math.max(document.body.scrollTop, window.pageYOffset) <= 60) {
             $("ul").css("background-color", "black");
-            $("ul").css("color", "white");
-            document.getElementsByClassName("navbar")[0].style.paddingBottom = "145px";
+            $("ul").css("color", "white"); 
+            $(".navbar").css("paddingBottom", "145px");
         }
     }
 }
@@ -304,8 +299,6 @@ function event_desc(event_id) {
         $(".active_event").hide();
     }
 }
-
-
 
 //jQuery
 $(document).ready(function(){
