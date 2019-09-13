@@ -296,7 +296,7 @@ function event_desc(event_id) {
         $(".event_desc_text:nth-child(" + event_id + ")").show("500");
         $(".active_event").hide();
         $("#event_" + event_id).fadeIn("500");
-document.getElementsByClassName('event_desc')[0].scrollIntoView();
+        $(".event_desc").scrollIntoView();
 
     } else {
         $(".event_desc_text:nth-child(" + event_id + ")").hide("fast");
