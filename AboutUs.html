@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="Script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COMeIT - About Us</title>
+
+    <style>
+            .team {
+                position: relative;
+                top: 150px;
+                width: 60%;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+    
+            .team h2 {
+                text-align: center;
+                letter-spacing: 25px;
+                font-weight: 400;
+                margin-bottom: 50px;
+            }
+    
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto auto; 
+                grid-gap: 20px;
+                padding: 10px;
+            }
+    
+            .grid-container div {
+                background-color: #282828;
+                color: white;
+                border: #282828 solid 1px;
+                text-align: center;
+                padding: 20px 20px;
+                font-size: 30px;
+                transition: 0.3s ease-in-out;
+            }
+    
+            .grid-container div:hover{
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+                transition: 0.3s ease-in-out;
+                background-color: #323232;
+            }
+    
+            .item1 {
+                grid-column: 1 / span 4;
+                grid-row: 1;
+            }
+            
+            /*Section*/
+            .item2 {
+                grid-column: 1;
+                grid-row: 2 / span 2;
+            }
+    
+            .item4 {
+                grid-column: 3;
+                grid-row: 2 / span 2;
+            }
+    
+            /*Section*/
+            .item7 {
+                grid-column: 2;
+                grid-row: 3 / span 2;
+            }
+    
+            .item9 {
+                grid-column: 4;
+                grid-row: 3 / span 2;
+            }
+    
+    
+            /*Section*/
+            .item10 {
+                grid-column: 1;
+                grid-row: 5 / span 2;
+            }
+    
+            .item12 {
+                grid-column: 3;
+                grid-row: 5 / span 2;
+            }
+    
+            /*Section*/
+            .item15 {
+                grid-column: 2;
+                grid-row: 6 / span 2;
+            }
+    
+            .item17 {
+                grid-column: 4;
+                grid-row: 6 / span 2;
+            }
+    
+    
+            /*Section*/
+            .item18 {
+                grid-column: 1;
+                grid-row: 8 / span 2;
+            }
+    
+            .item20 {
+                grid-column: 3;
+                grid-row: 8 / span 2;
+            }
+    
+            /*Section*/
+            .item23 {
+                grid-column: 2;
+                grid-row: 9 / span 2;
+            }
+    
+            .item26 {
+                grid-column: 4;
+                grid-row: 9 / span 2;
+            }
+    
+    
+            /*Section*/
+            .item27 {
+                grid-column: 1;
+                grid-row: 11 / span 2;
+            }
+    
+            .item29 {
+                grid-column: 3;
+                grid-row: 11 / span 2;
+            }
+    
+            /*Section*/
+            .item32 {
+                grid-column: 2;
+                grid-row: 12 / span 2;
+            }
+    
+            .item33 {
+                grid-column: 4;
+                grid-row: 12 / span 2;
+            }
+    
+    
+            /*Section*/
+            .item34 {
+                grid-column: 1;
+                grid-row: 14 / span 2;
+            }
+    
+            .item36 {
+                grid-column: 3;
+                grid-row: 14 / span 2;
+            }
+    
+    
+            .grid-container div h3 {
+                font-weight: 500;
+                margin-top: 10px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-size: 22px;
+            }
+    
+            .grid-container div h5 {
+                font-weight: 400;
+                font-size: 17px;
+            }
+    
+            .grid-container div p {
+                font-weight: 400;
+                font-size: 15px;
+                margin-top: 5px;
+            }
+        </style>
+
+
+</head>
+<body>
+        <div class="loader">
+            <div class="box">
+                <div class="b b1"></div>
+                <div class="b b2"></div>
+                <div class="b b3"></div>
+                <div class="b b4"></div>
+                <div class="ready">Getting Ready
+                </div>
+            </div>
+        </div>
+        <div class="team_content">
+            <div class="navbar">
+                <ul class="menu" id="nav">
+                    <li class="logo" onclick="window.location.href = 'index.html';">COMeIT</li>
+                    <li class="item" onclick="window.location.href = 'Events.HTML';">Events</li>
+                    <li class="item" onclick="window.location.href = 'Main.HTML';">Register</li>
+                    <li class="item" onclick="window.location.href = 'ContactUS.HTML';">Contact Us</li>
+                    <li class="item" onclick="window.location.href = 'AboutUs.html';">About Us</li>
+                    <li class="toggle" onclick="toggle()">
+                        <div>
+                            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMTI0IDEyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI0IDEyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnPgoJPHBhdGggZD0iTTExMiw2SDEyQzUuNCw2LDAsMTEuNCwwLDE4czUuNCwxMiwxMiwxMmgxMDBjNi42LDAsMTItNS40LDEyLTEyUzExOC42LDYsMTEyLDZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDUwSDEyQzUuNCw1MCwwLDU1LjQsMCw2MmMwLDYuNiw1LjQsMTIsMTIsMTJoMTAwYzYuNiwwLDEyLTUuNCwxMi0xMkMxMjQsNTUuNCwxMTguNiw1MCwxMTIsNTB6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDk0SDEyYy02LjYsMC0xMiw1LjQtMTIsMTJzNS40LDEyLDEyLDEyaDEwMGM2LjYsMCwxMi01LjQsMTItMTJTMTE4LjYsOTQsMTEyLDk0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                                style="width: 28px" class="habtn">
+                            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMzQ4LjMzMyAzNDguMzM0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDguMzMzIDM0OC4zMzQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48Zz4KCTxwYXRoIGQ9Ik0zMzYuNTU5LDY4LjYxMUwyMzEuMDE2LDE3NC4xNjVsMTA1LjU0MywxMDUuNTQ5YzE1LjY5OSwxNS43MDUsMTUuNjk5LDQxLjE0NSwwLDU2Ljg1ICAgYy03Ljg0NCw3Ljg0NC0xOC4xMjgsMTEuNzY5LTI4LjQwNywxMS43NjljLTEwLjI5NiwwLTIwLjU4MS0zLjkxOS0yOC40MTktMTEuNzY5TDE3NC4xNjcsMjMxLjAwM0w2OC42MDksMzM2LjU2MyAgIGMtNy44NDMsNy44NDQtMTguMTI4LDExLjc2OS0yOC40MTYsMTEuNzY5Yy0xMC4yODUsMC0yMC41NjMtMy45MTktMjguNDEzLTExLjc2OWMtMTUuNjk5LTE1LjY5OC0xNS42OTktNDEuMTM5LDAtNTYuODUgICBsMTA1LjU0LTEwNS41NDlMMTEuNzc0LDY4LjYxMWMtMTUuNjk5LTE1LjY5OS0xNS42OTktNDEuMTQ1LDAtNTYuODQ0YzE1LjY5Ni0xNS42ODcsNDEuMTI3LTE1LjY4Nyw1Ni44MjksMGwxMDUuNTYzLDEwNS41NTQgICBMMjc5LjcyMSwxMS43NjdjMTUuNzA1LTE1LjY4Nyw0MS4xMzktMTUuNjg3LDU2LjgzMiwwQzM1Mi4yNTgsMjcuNDY2LDM1Mi4yNTgsNTIuOTEyLDMzNi41NTksNjguNjExeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                                style="width: 24px;" hidden class="close">
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+        <div class="team">
+                <h2>TEAM</h2>
+    
+                <div class="grid-container">
+                    <div class="item1">
+                        <h5>President</h5>
+                        <h3>Amey Patil</h3>
+                        <p>Computer Engg. - TY</p>
+                    </div>
+    
+    
+                    <div class="item2">
+                        <h5>Vice-President</h5>
+                        <h3>Kishor Shivsharan</h3>
+                        <p>IT - TY</p>
+                    </div>
+                    <div class="item3">
+                        <h5>Vice-President</h5>
+                        <h3>Shreyash Battul</h3>
+                        <p>Computer Engg. - TY</p>
+                    </div>
+                    <div class="item4">
+                        <h5>Vice-President</h5>
+                        <h3>Tejas Atkale</h3>
+                        <p>Computer Engg. - TY</p>
+                    </div>
+                    <div class="item5">
+                        <h5>Vice-President</h5>
+                        <h3>Sameer Patil</h3>
+                        <p>Computer Engg.- TY</p>
+                    </div>
+    
+    
+                    <div class="item6">
+                        <h5>Technical Secretary</h5>
+                        <h3>Niketan Gulekar</h3>
+                        <p>IT - TY</p>
+                    </div>
+                    <div class="item7">
+                        <h5>Technical Secretary</h5>
+                        <h3>Vaishnavi Dadhiwal</h3>
+                        <p>Computer Engg. - TY</p>
+                    </div>
+                    <div class="item8">
+                        <h5>Technical Secretary</h5>
+                        <h3>Hemil Ruparel</h3>
+                        <p>Computer Engg. - SY</p>
+                    </div>
+                    <div class="item9">
+                        <h5>Technical Secretary</h5>
+                        <h3>Prathamesh Punde</h3>
+                        <p>Computer Engg. - SY</p>
+                    </div>
+    
+                    <div class="item10">
+                        <h5>Discipline Secretary</h5>
+                        <h3>Prashant Chavan</h3>
+                        <p>IT - TY</p>
+                    </div>
+                    <div class="item11">
+                            <h5>Secretary</h5>
+                            <h3>Name 11</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item12">
+                            <h5>Secretary</h5>
+                            <h3>Name 12</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item13">
+                            <h5>Secretary</h5>
+                            <h3>Name 13</h3>
+                            <p>Dept - Year</p>
+                        </div>
+    
+    
+                    <div class="item14">
+                            <h5>Cleanliness Secretary</h5>
+                            <h3>Pankaj Desai</h3>
+                            <p>IT Dept - Year</p>
+                        </div>
+                    <div class="item15">
+                            <h5>Secretary</h5>
+                            <h3>Name 15</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item16">
+                            <h5>Secretary</h5>
+                            <h3>Name 16</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item17">
+                            <h5>Secretary</h5>
+                            <h3>Name 17</h3>
+                            <p>Dept - Year</p>
+                        </div>
+    
+    
+                    <div class="item18">
+                            <h5>Sports Secretary</h5>
+                            <h3>Suyash Bavalekar</h3>
+                            <p>IT Dept - Year</p>
+                        </div>
+                    <div class="item19">
+                            <h5>Sports Secretary</h5>
+                            <h3>Atharva Deshmukh</h3>
+                            <p>Computer Engg. SY</p>
+                        </div>
+                    <div class="item20">
+                            <h5>Secretary</h5>
+                            <h3>Name 20</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item21">
+                            <h5>Secretary</h5>
+                            <h3>Name 21</h3>
+                            <p>Dept - Year</p>
+                        </div>
+    
+    
+                    <div class="item22">
+                            <h5>Cultural Secretary</h5>
+                            <h3>Sakshi Shinde</h3>
+                            <p>IT Dept - Year</p>
+                            
+                        </div>
+                    <div class="item23">
+                            <h5>Cultural Secretary</h5>
+                            <h3>Aqsa Shaikh</h3>
+                            <p>Computer Engg. SY</p>
+                        </div>
+                    <div class="item24">
+                            <h5>Secretary</h5>
+                            <h3>Name 25</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item25">
+                            <h5>Secretary</h5>
+                            <h3>Name 25</h3>
+                            <p>Dept - Year</p>
+                        </div>
+    
+    
+                    <div class="item26">
+                            <h5>Secretary</h5>
+                            <h3>Name 26</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item27">
+                            <h5>Secretary</h5>
+                            <h3>Name 27</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item28">
+                            <h5>Secretary</h5>
+                            <h3>Name 28</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item29">
+                            <h5>Secretary</h5>
+                            <h3>Name 29</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item30">
+                            <h5>Secretary</h5>
+                            <h3>Name 30</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item31">
+                            <h5>Secretary</h5>
+                            <h3>Name 31</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item32">
+                            <h5>Secretary</h5>
+                            <h3>Name 32</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item33">
+                            <h5>Secretary</h5>
+                            <h3>Name 33</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item34">
+                            <h5>Secretary</h5>
+                            <h3>Name 34</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item35">
+                            <h5>Secretary</h5>
+                            <h3>Name 35</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item36">
+                            <h5>Secretary</h5>
+                            <h3>Name 36</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item37">
+                            <h5>Secretary</h5>
+                            <h3>Name 37</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                    <div class="item38">
+                            <h5>Secretary</h5>
+                            <h3>Name 38</h3>
+                            <p>Dept - Year</p>
+                        </div>
+                </div>
+            </div>
+
+            <div id="totop">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAAAsklEQVR42u3V4Q0BQQCEUQ2gSfo49IauRgiJyP0R5EzufQ3svGQ3u1hIkiRJ0k/KkKF5/i7XWgnZ51Ej4Wl+IyGHvNZEyDZj9RCyzBEBAQEBAQEBAQEBAQEBAQHhwyOmamgHfIuQlBOScgLAjK9Q+SPu+Myyqv6LzTd/xvNP5ptvvvnmvzf/bL75s5y/Nt98882fALCpnn8jDNXzRwht818IjfOfCK3z74Tm+ZIkSZL+ugsexKZhBnZnOgAAAABJRU5ErkJggg=="
+                        onclick="window.scrollTo(0, 0);" />
+                </div>
+        
+                <footer>
+                    <div id="Copyright">Developed by COMeIT Technical Team - Government Polytechnic Pune. Copyright © 2019 All
+                        rights reserved.</div>
+                </footer>
+        
+            </div>
+        </body>
+        
+        </html>

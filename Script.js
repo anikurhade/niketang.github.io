@@ -102,6 +102,7 @@ function NavBarPos() {
             "background-color": "black",
             "color": "white"
         });
+        $(".toggle").css("filter", "invert(0)");
     } else {
         $(".menu").removeClass("sticky");
         $(".logo").css({
@@ -297,3 +298,49 @@ function event_desc(event_id) {
         $(".event_desc_text:nth-child(" + event_id + ")").hide("300");
     }
 }
+
+$(document).ready(function () {
+    $("ul").hover(function () {
+        $(".toggle").css("filter", "invert(0)");
+    }, function () {
+        $(".toggle").css("filter", "invert(1)");
+    });
+
+
+
+
+    
+});
+
+
+
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2020 08:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
+
+  var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 *24 ));
+
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  $(".months h2").html(months);
+  $(".days h2").html(days);
+  $(".hours h2").html(hours);
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x); 
+  }
+}, 1000);
