@@ -555,7 +555,7 @@ div.parallax_text h2 {
 
 /*Events Page Styling*/
 div.bgimg {
-    width: 100vw;
+    width: 100%;
     margin-top: -75px;
     height: calc(100vh + 50px);
     overflow: hidden;
@@ -592,7 +592,7 @@ div.bgimg h1 {
 }
 
 div.bgimg p {
-    margin-top: 20px 0px 0px 50%;
+    margin: 20px 0px 0px 50%;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.7);
     width: 85% !important;
