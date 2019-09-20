@@ -12,7 +12,6 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-
 }
 
 p,
@@ -126,7 +125,6 @@ ul {
     transition: 0.3s ease-in-out;
 }
 
-ul:hover,
 ul:active {
     background-color: black !important;
     color: white !important;
@@ -187,7 +185,6 @@ ul:active {
     margin-left: 50px;
 }
 
-.item:hover,
 .item:active {
     background-color: white;
     color: black;
@@ -244,7 +241,6 @@ p.social {
     display: inline;
 }
 
-p.social:hover,
 p.social:active {
     color: black;
 }
@@ -427,7 +423,6 @@ input.inputs:focus {
     display: none;
 }
 
-.select-items div:hover,
 .select-items:active,
 .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
@@ -446,11 +441,6 @@ div#totop {
     cursor: pointer;
     display: none;
     transition: 0.3s ease-in-out;
-}
-
-div#totop:hover {
-    background-color: #000;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 div#totop img {
@@ -555,7 +545,7 @@ div.parallax_text h2 {
 
 /*Events Page Styling*/
 div.bgimg {
-    width: 100vw;
+    width: 100%;
     margin-top: -75px;
     height: calc(100vh + 50px);
     overflow: hidden;
@@ -592,7 +582,7 @@ div.bgimg h1 {
 }
 
 div.bgimg p {
-    margin-top: 20px 0px 0px 50%;
+    margin: 20px 0px 0px 50%;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.7);
     width: 85% !important;
@@ -645,7 +635,6 @@ div.col img {
     object-fit: cover;
 }
 
-div.col img:hover,
 div.col img:active {
     filter: blur(0px);
     cursor: pointer;
@@ -764,7 +753,6 @@ div.landing div.countdown div h4 {
     transition: 0.3s ease-in-out;
 }
 
-.grid-container div:hover,
 .grid-container div:active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     transition: 0.3s ease-in-out;
@@ -844,7 +832,6 @@ div.faq {
 }
 
 .active_ac,
-.accordion:hover,
 .accordion:active {
     background-color: #ccc;
 }
@@ -867,4 +854,45 @@ div.faq {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+@media(hover: hover) and (pointer: fine) {
+    ul:hover {
+        background-color: black !important;
+        color: white !important;
+    }
+
+    .item:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .grid-container div:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+        transition: 0.3s ease-in-out;
+        background-color: #323232;
+    }
+
+    div.col img:hover {
+        filter: blur(0px);
+        cursor: pointer;
+    }
+
+    div#totop:hover {
+        background-color: #000;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .select-items div:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease-in-out;
+    }
+
+    p.social:hover {
+        color: black;
+    }
 }
