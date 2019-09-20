@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Designed By Niketan Gulekar for COMeIT
-        Copyright 2019. All Rights Reserved
-        Github Profile : https://github.com/NiketanG/
-        Github Repo : https://github.com/NiketanG/COMEIT_RegistrationApp
--->
 
 <head>
     <meta charset="UTF-8">
@@ -12,50 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>COMeIT - Home</title>
     <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="Styles_600px.css" media="screen and (min-width: 600px) and (max-width: 899px)">
+    <link rel="stylesheet" href="Styles_900px.css" media="screen and (min-width: 900px)">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="Script.js"></script>
 
     <style>
-        div.container_box {
-            position: relative;
-            top: 180px;
-            width: 50%;
-            margin-left: 50%;
-            transform: translate(-50%, 0%);
-        }
-
-        div.container_box div.container-item {
-            margin: 10px;
-            float: left;
-            width: calc(50% - 20px);
-            height: 125px;
-            background-color: #282828;
-            color: white;
-        }
-
-        div.container_box div.container-item:first-child,
-        div.container_box div.container-item:last-child {
-            background-color: #414141;
-        }
-
-        div.container_box div.container-item img {
-            width: 20%;
-            float: left;
-            margin-left: 12.5%;
-            margin-top: 80px;
-            transform: translateY(-75%);
-        }
-
-        div.container_box div.container-item div.text-block {
-            width: 50%;
-            margin-left: 50%;
-            margin-top: 75px;
-            height: auto;
-            transform: translateY(-80%);
-        }
-
         ul {
             color: white !important;
+        }
+
+        .toggle {
+            filter: invert(0) !important;
         }
     </style>
 </head>
@@ -92,42 +55,40 @@
         </div>
 
         <div class="bgimg landing">
-          <img src="Pictures/LRM_EXPORT_20180119_145221.jpg">
+            <img src="Pictures/LRM_EXPORT_20180119_145221.jpg">
             <div class="text">
-                <h3>COMeIT Presents</h3>
-                <h1>Technovision 2020</h1>
+                <h3>COMEIT PRESENTS</h3>
+                <h1>TECHNOVISION 2020</h1>
                 <p>A multi day technical celebration to empower the young talents</p>
                 <h1 id="coming_soon">COMING SOON</h1>
                 <div class="countdown">
                     <div class="months">
                         <h2>12</h2>
-                        <h4>Months</h4>
+                        <h4>MONTHS</h4>
                     </div>
                     <div class="days">
                         <h2>31</h2>
-                        <h4>Days</h4>
+                        <h4>DAYS</h4>
                     </div>
                     <div class="hours">
                         <h2>12</h2>
-                        <h4>Hours</h4>
+                        <h4>HOURS</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-        <div class="parallax">
-            <div class="parallax_img"></div>
-            <div class="parallax_text">
-                <h2>Heading</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nostrum consectetur eos? Veniam
-                    repellat quis, eveniet distinctio maxime modi aspernatur velit ratione labore deleniti et, possimus
-                    porro sint, libero culpa!</p>
-            </div>
+    <div class="parallax">
+        <div class="parallax_img"></div>
+        <div class="parallax_text">
+            <h2>HEADING</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nostrum consectetur eos? Veniam repellat
+                quis, eveniet distinctio maxime modi aspernatur velit ratione labore deleniti et, possimus porro sint,
+                libero culpa!</p>
         </div>
+    </div>
 
-        
     <div class="stats">
         <h2>Statistics</h2>
         <div class="competitions">
@@ -150,52 +111,20 @@
         </div>
     </div>
 
-    <!-- <div class="container_box">
-            <div class="container-item">
-                <img src="Pictures/money.png">
-                <div class="text-block">
-                    <h3>Creativity</h3>
-                    <p>Creativity Text</p>
-                </div>
-            </div>
-
-            <div class="container-item">
-                <img src="Pictures/money.png">
-                <div class="text-block">
-                    <h3>Creativity</h3>
-                    <p>Creativity Text</p>
-                </div>
-            </div>
-
-            <div class="container-item">
-                <img src="Pictures/money.png">
-                <div class="text-block">
-                    <h3>Creativity</h3>
-                    <p>Creativity Text</p>
-                </div>
-            </div>
-
-            <div class="container-item">
-                <img src="Pictures/money.png">
-                <div class="text-block">
-                    <h3>Creativity</h3>
-                    <p>Creativity Text</p>
-                </div>
-            </div>
-        </div> -->
-
     <div id="totop">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAAAsklEQVR42u3V4Q0BQQCEUQ2gSfo49IauRgiJyP0R5EzufQ3svGQ3u1hIkiRJ0k/KkKF5/i7XWgnZ51Ej4Wl+IyGHvNZEyDZj9RCyzBEBAQEBAQEBAQEBAQEBAQHhwyOmamgHfIuQlBOScgLAjK9Q+SPu+Myyqv6LzTd/xvNP5ptvvvnmvzf/bL75s5y/Nt98882fALCpnn8jDNXzRwht818IjfOfCK3z74Tm+ZIkSZL+ugsexKZhBnZnOgAAAABJRU5ErkJggg=="
             onclick="window.scrollTo(0, 0);" />
     </div>
 
     <footer>
-        <div id="Copyright">Developed by COMeIT Technical Team - Government Polytechnic Pune. Copyright © 2019 All
-            rights reserved.
-            <br>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a
-                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-        </div>
+        <div id="Copyright">
+            <div>Designed by <a href="https://www.instagram.com/nikketan" target="_blank">Niketan Gulekar</a> for
+                COMeIT, Government Polytechnic Pune. Copyright © 2019 All rights reserved. <br>Icons made by <a
+                    href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a
+                    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
     </footer>
+
     </div>
 </body>
 

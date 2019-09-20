@@ -3,16 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta Name="viewport" team_content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="Styles_600px.css" media="screen and (min-width: 600px) and (max-width: 899px)">
+    <link rel="stylesheet" href="Styles_900px.css" media="screen and (min-width: 900px)">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="Script.js"></script>
-    <meta http-equiv="X-UA-Compatible" team_content="ie=edge">
-    <title>COMeIT Event Registration</title>
-
-    
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COMeIT - Contact Us</title>
 </head>
+<style>
+    .toggle {
+        filter: invert(1) !important;
+    }
+</style>
 
 <body>
     <div class="loader">
@@ -25,7 +29,8 @@
             </div>
         </div>
     </div>
-    <div class="team_content">
+
+    <div class="content">
         <div class="navbar">
             <ul class="menu" id="nav">
                 <li class="logo" onclick="window.location.href = 'index.html';">COMeIT</li>
@@ -42,8 +47,7 @@
                     </div>
                 </li>
             </ul>
-        </div> 
-         
+        </div>
         <div class="emailsupport">
             <h3 class="custcare">Get in touch</h3><br>
             <h3 class="emailsupport">Email</h3>
@@ -95,8 +99,6 @@
                 }
             </script>
         </div>
-
-
         <div class="connect">
             <p class="center">Connect with us</p>
             <div class="social">

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>COMeIT - Home</title>
     <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="Styles_600px.css" media="screen and (min-width: 600px) and (max-width: 899px)">
+    <link rel="stylesheet" href="Styles_900px.css" media="screen and (min-width: 900px)">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="Script.js"></script>
-
-    <style>
-        ul {
-            color: white !important;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COMeIT - Events</title>
 </head>
+
+<style>
+    ul {
+        color: white !important;
+    }
+
+    .toggle {
+        filter: invert(0) !important;
+    }
+</style>
 
 <body>
     <div class="loader">
@@ -50,7 +55,7 @@
 
         <div class="bgimg">
             <img src="Pictures/christian-wiediger-WkfDrhxDMC8-unsplash.jpg"
-                srcset="Pictures/christian-wiediger-WkfDrhxDMC8-unsplash_min.jpg 480w,Pictures/christian-wiediger-WkfDrhxDMC8-unsplash_med.jpg 960w, Pictures/christian-wiediger-WkfDrhxDMC8-unsplash.jpg 1920w"
+                srcset="Pictures/christian-wiediger-WkfDrhxDMC8-unsplash_min.jpg 480w,Pictures/christian-wiediger-WkfDrhxDMC8-unsplash_med.jpg 960w,Pictures/christian-wiediger-WkfDrhxDMC8-unsplash.jpg 1920w"
                 sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
             <div class="text">
                 <h3>COMeIT Presents</h3>
@@ -63,14 +68,13 @@
         </div>
 
         <div class="gallery">
-
             <div class="col" onclick="event_desc(1)">
                 <div class="img">
                     <img src="Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg"
                         srcset="Pictures/safar-safarov-LKsHwgzyk7c-unsplash_min.jpg 480w,Pictures/safar-safarov-LKsHwgzyk7c-unsplash_med.jpg 960w, Pictures/safar-safarov-LKsHwgzyk7c-unsplash.jpg 1920w"
                         sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
-                        <p>Clash of Code</p>
+                        <p>CLASH OF CODE</p>
                     </div>
                 </div>
                 <div class="active_event" id="event_1"></div>
@@ -82,7 +86,7 @@
                         srcset="Pictures/chris-ried-ieic5Tq8YMk-unsplash_min.jpg 480w,Pictures/chris-ried-ieic5Tq8YMk-unsplash_med.jpg 960w, Pictures/chris-ried-ieic5Tq8YMk-unsplash.jpg 1920w"
                         sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
-                        <p>Webber</p>
+                        <p>WEBBER</p>
                     </div>
                 </div>
                 <div class="active_event" id="event_2"></div>
@@ -94,14 +98,11 @@
                         srcset="Pictures/anas-alshanti-feXpdV001o4-unsplash_min.jpg 480w,Pictures/anas-alshanti-feXpdV001o4-unsplash_med.jpg 960w, Pictures/anas-alshanti-feXpdV001o4-unsplash.jpg 1920w"
                         sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
-                        <p>Hotkeys</p>
+                        <p>HOTKEYS</p>
                     </div>
                 </div>
                 <div class="active_event" id="event_3"></div>
             </div>
-
-            <!--<div class="clearfix"></div>-->
-
         </div>
 
         <br><br><br>
@@ -172,7 +173,7 @@
                         srcset="Pictures/n-RFId0_7kep4-unsplash_min.jpg 480w,Pictures/n-RFId0_7kep4-unsplash_med.jpg 960w, Pictures/n-RFId0_7kep4-unsplash.jpg 1920w"
                         sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
-                        <p>Flash</p>
+                        <p>FLASH</p>
                     </div>
                 </div>
             </div>
@@ -184,7 +185,7 @@
                         srcset="Pictures/william-bayreuther-hfk6xOjQlFk-unsplash_min.jpg 480w,Pictures/william-bayreuther-hfk6xOjQlFk-unsplash_med.jpg 960w, Pictures/william-bayreuther-hfk6xOjQlFk-unsplash.jpg 1920w"
                         sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
-                        <p>Capture</p>
+                        <p>CAPTURE</p>
                     </div>
                 </div>
             </div>
@@ -196,7 +197,7 @@
                         srcset="Pictures/alex-litvin-MAYsdoYpGuk-unsplash_min.jpg 480w,Pictures/alex-litvin-MAYsdoYpGuk-unsplash_med.jpg 960w, Pictures/alex-litvin-MAYsdoYpGuk-unsplash.jpg 1920w"
                         sizes="(max-width: 480px) 320px,(max-width: 960px) 480px, 1920px">
                     <div class="text-block">
-                        <p>Project Present-ation</p>
+                        <p>PROJECT PRESENT- ATION</p>
                     </div>
                 </div>
             </div>

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Designed By Niketan Gulekar for COMeIT
-        Copyright 2019. All Rights Reserved
-        Github Profile : https://github.com/NiketanG/
-        Github Repo : https://github.com/NiketanG/COMEIT_RegistrationApp
--->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="Styles_600px.css" media="screen and (min-width: 600px) and (max-width: 899px)">
+    <link rel="stylesheet" href="Styles_900px.css" media="screen and (min-width: 900px)">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="Script.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,14 +15,12 @@
     <script lnaguage="javascript" type="text/javascript">
         window.onload = function () {
             loadform();
-
             //Preloader
             setTimeout(() => {
                 $('.loader').fadeOut(500);
-            }, 1000);
+            }, 100);
         }
     </script>
-
 </head>
 
 <body>
@@ -58,20 +53,17 @@
                 </li>
             </ul>
         </div>
-
         <form id="Register" name="Register" action="/" method="POST">
             <p class="reg_header">Name : </p>
             <p id="name_v" class="validation">Invalid Name</p>
             <p id="name_vb" class="validation">Name cannot be left blank</p>
             <input type="text" name="name" id="name" class="inputs" placeholder="Severus Snape" onblur="validate_name()"
                 onchange="validate_name()" required />
-
             <p class="reg_header">Phone No. : </p>
             <p id="phone_v" class="validation">Invalid Phone No.</p>
             <p id="phone_vb" class="blank validation">Phone No. cannot be left blank</p>
             <input type="tel" placeholder="(605) 475-6961" maxlength="10" pattern="[0-9]{10}" name="PhNo" id="PhNo"
                 class="inputs" onblur="validate_phno()" onchange="validate_phno()" required />
-
             <p class="reg_header">Email Address. : </p>
             <p id="email_v" class="validation">Invalid Email Address</p>
             <p id="email_vb" class="blank validation">Email Address cannot be left blank</p>
@@ -114,18 +106,15 @@
                     <input type="radio" name="radio_team" value="squad" id="radio_team" onclick="setgrp()">
                     <label class="radio">Squad</label>
                 </div>
-
             </div>
-
             <p class="reg_header grp">Group Name : </p>
             <p id="group_vb" class=" grp validation">Group Name cannot be left blank</p>
             <input type="text" name="GrpName" id="GrpName" class="grp inputs" onblur="validate_grp()"
                 onchange="validate_grp()" required>
 
-            <input type="button" value="Register" id="registerbtn" class="registerbtn" onclick="validate()"
+            <input type="button" value="REGISTER" id="registerbtn" class="registerbtn" onclick="validate()"
                 disabled=true>
         </form>
-
         <div style="position: relative; top: 150px;">
             <p class="center">Connect with us</p>
             <div class="social">
@@ -134,15 +123,14 @@
                 <p class="social">Twitter
             </div>
         </div>
-
-        <footer>
-            <div id="Copyright">Developed by COMeIT Technical Team - Government Polytechnic Pune. Copyright © 2019 All
-                rights reserved.</div>
-        </footer>
         <div id="totop">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAAAsklEQVR42u3V4Q0BQQCEUQ2gSfo49IauRgiJyP0R5EzufQ3svGQ3u1hIkiRJ0k/KkKF5/i7XWgnZ51Ej4Wl+IyGHvNZEyDZj9RCyzBEBAQEBAQEBAQEBAQEBAQHhwyOmamgHfIuQlBOScgLAjK9Q+SPu+Myyqv6LzTd/xvNP5ptvvvnmvzf/bL75s5y/Nt98882fALCpnn8jDNXzRwht818IjfOfCK3z74Tm+ZIkSZL+ugsexKZhBnZnOgAAAABJRU5ErkJggg=="
                 onclick="window.scrollTo(0, 0);" />
         </div>
+        <footer>
+            <div id="Copyright">Designed by <a href="https://www.instagram.com/nikketan" target="_blank">Niketan
+                    Gulekar</a> for COMeIT, Government Polytechnic Pune. Copyright © 2019 All rights reserved.</div>
+        </footer>
     </div>
 </body>
 
