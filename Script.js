@@ -4,88 +4,6 @@ window.onload = function load() {
         $('.loader').fadeOut(500);
     }, 100);
 }
-
-function loadform() {
-    selectlist();
-    setgrp();
-}
-
-function selectlist() {
-    var x, i, j, selElmnt, a, b, c;
-    /*look for any elements with the class "custom-select":*/
-    x = document.getElementsByClassName("custom-select");
-    for (i = 0; i < x.length; i++) {
-        selElmnt = x[i].getElementsByTagName("select")[0];
-        /*for each element, create a new DIV that will act as the selected item:*/
-        a = document.createElement("DIV");
-        a.setAttribute("class", "select-selected");
-        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-        x[i].appendChild(a);
-        /*for each element, create a new DIV that will contain the option list:*/
-        b = document.createElement("DIV");
-        b.setAttribute("class", "select-items select-hide");
-        for (j = 1; j < selElmnt.length; j++) {
-            /*for each option in the original select element,
-            create a new DIV that will act as an option item:*/
-            c = document.createElement("DIV");
-            c.innerHTML = selElmnt.options[j].innerHTML;
-            c.addEventListener("click", function (e) {
-                /*when an item is clicked, update the original select box,
-                and the selected item:*/
-                var y, i, k, s, h;
-                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                h = this.parentNode.previousSibling;
-                for (i = 0; i < s.length; i++) {
-                    if (s.options[i].innerHTML == this.innerHTML) {
-                        s.selectedIndex = i;
-                        h.innerHTML = this.innerHTML;
-                        y = this.parentNode.getElementsByClassName("same-as-selected");
-                        for (k = 0; k < y.length; k++) {
-                            y[k].removeAttribute("class");
-                        }
-                        this.setAttribute("class", "same-as-selected");
-                        break;
-                    }
-                }
-                h.click();
-            });
-            b.appendChild(c);
-        }
-        x[i].appendChild(b);
-        a.addEventListener("click", function (e) {
-            /*when the select box is clicked, close any other select boxes,
-            and open/close the current select box:*/
-            e.stopPropagation();
-            closeAllSelect(this);
-            this.nextSibling.classList.toggle("select-hide");
-            this.classList.toggle("select-arrow-active");
-        });
-    }
-}
-
-function closeAllSelect(elmnt) {
-    /*a function that will close all select boxes in the document,
-    except the current select box:*/
-    var x, y, i, arrNo = [];
-    x = document.getElementsByClassName("select-items");
-    y = document.getElementsByClassName("select-selected");
-    for (i = 0; i < y.length; i++) {
-        if (elmnt == y[i]) {
-            arrNo.push(i)
-        } else {
-            y[i].classList.remove("select-arrow-active");
-        }
-    }
-    for (i = 0; i < x.length; i++) {
-        if (arrNo.indexOf(i)) {
-            x[i].classList.add("select-hide");
-        }
-    }
-}
-/*if the user clicks anywhere outside the select box,
-then close all select boxes:*/
-document.addEventListener("click", closeAllSelect);
-
 window.onscroll = function () {
     NavBarPos();
 }
@@ -103,7 +21,14 @@ function NavBarPos() {
             "color": "white"
         });
         $(".toggle").css("filter", "invert(0)");
+        $("ul").mouseleave(function(){
+            $(".toggle").css("filter", "invert(0)");
+        });
     } else {
+        $(".toggle").css("filter", "invert(1)");
+        $("ul").mouseleave(function(){
+            $(".toggle").css("filter", "invert(1)");
+        });
         $(".menu").removeClass("sticky");
         $(".logo").css({
             "lineHeight": "80px",
@@ -150,155 +75,6 @@ function toggle() {
     }
 }
 
-function validate_name() {
-    var name = $("#name").val();
-    var re_name = /^[A-Za-z ]/;
-    if (name.length < 1) {
-        $("#name_vb").show();
-        return false;
-    } else if ((name.length > 0) && ((re_name.test(name) == false))) {
-        $("#name_v").show();
-        $("#name_vb").hide();
-        return false;
-    } else if ((re_name.test(name)) || (name.length < 1)) {
-        $("#name_v").hide();
-        $("#name_vb").hide();
-        return true;
-    }
-}
-
-function validate_email() {
-    blank_check();
-    var email = $("#email").val();
-    var re_email = /(^\w)*[@](\w)*(\.)(\w)*/;
-    if (email.length < 1) {
-        $("#email_vb").show();
-        return false;
-    } else if ((email.length > 0) && ((re_email.test(email) == false))) {
-        $("#email_v").show();
-        $("#email_vb").hide();
-        return false;
-    } else if ((re_email.test(email)) || (email.length < 1)) {
-        $("#email_v").hide();
-        $("#email_vb").hide();
-        return true;
-    }
-}
-
-function validate_phno() {
-    blank_check();
-    var phno = $("#PhNo").val();
-    var re_phno = /^\d{10}$/;
-    if (phno.length < 1) {
-        $("#phone_vb").show();
-        return false;
-    } else if ((phno.length > 0) && ((re_phno.test(phno) == false))) {
-        $("#phone_v").show();
-        $("#phone_vb").hide();
-        return false;
-    } else if ((re_phno.test(phno)) || (phno.length < 1)) {
-        $("#phone_v").hide();
-        $("#phone_vb").hide();
-        return true;
-    }
-}
-
-function validate_clg() {
-    blank_check();
-    var clgname = $("#ClgName").val();
-    if (clgname.length < 1) {
-        $("#clg_vb").show();
-        return false;
-    } else if (clgname.length > 0) {
-        $("#clg_vb").hide();
-        return true;
-    }
-}
-
-function setgrp() {
-    var checkedrdbtn = document.querySelector('input[name="radio_team"]:checked').value;
-
-    if (checkedrdbtn == "solo") {
-        $(".grp").hide();
-        $("#GrpName").attr("disabled", true);
-
-    } else {
-        $(".grp").show();
-        $("#GrpName").attr("disabled", false);
-    }
-}
-
-function validate_grp() {
-    blank_check();
-    var checkedrdbtn = document.querySelector('input[name="radio_team"]:checked').value;
-
-    if (checkedrdbtn == "solo") {
-        return true;
-    } else {
-        var grpname = $("#GrpName").val();
-        if (grpname.length < 1) {
-            $("#group_vb").show();
-            return false;
-        } else if (grpname.length > 0) {
-            $("#group_vb").hide();
-            return true;
-        }
-    }
-}
-
-//Blank Check
-function blank_check() {
-    var x = document.forms["Register"].value;
-    var checkedrdbtn = document.querySelector('input[name="radio_team"]:checked').value;
-
-    if ((x == "") && (checkedrdbtn == "solo")) {
-        $("#registerbtn").attr("disabled", true);
-        return false;
-    } else {
-        $("#registerbtn").attr("disabled", false);
-        return true;
-    }
-}
-
-function event_check() {
-    var e = $("#events").prop('selectedIndex');
-    if ((e == '0')) {
-        $("#registerbtn").attr("disabled", true);
-        return false;
-    } else {
-        $("#registerbtn").attr("disabled", false);
-        return true;
-    }
-}
-
-function validate() {
-    if (validate_name() && event_check() && validate_phno() && validate_email() && validate_clg() && validate_grp() && blank_check()) {
-        //Submit Form 
-        $("form").submit();
-        alert("Registration Successful ! :)")
-    } else {
-        alert("Please check all fields.")
-    }
-}
-
-function event_desc(event_id) {
-    if ($(".event_desc_text:nth-child(" + event_id + ")").is(':hidden')) {
-        $(".event_desc").fadeIn("slow");
-        $(".event_desc_text").hide();
-        $(".event_desc_text:nth-child(" + event_id + ")").slideDown("500");
-
-        $('html, body').animate({
-            scrollTop: ($('.event_desc').offset().top) - 100
-        }, 10);
-        $(".active_event").hide();
-        $("#event_" + event_id).fadeIn("500");
-    } else {
-        $(".active_event").slideUp();
-        $(".event_desc").slideUp();
-        $(".event_desc_text:nth-child(" + event_id + ")").hide("300");
-    }
-}
-
 $(document).ready(function () {
     $("ul").hover(function () {
         $(".toggle").css("filter", "invert(0)");
@@ -306,35 +82,3 @@ $(document).ready(function () {
         $(".toggle").css("filter", "invert(1)");
     });
 });
-
-
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2020 08:30:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function () {
-
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-
-    var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    $(".months h2").html(months);
-    $(".days h2").html(days);
-    $(".hours h2").html(hours);
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-    }
-}, 1000);

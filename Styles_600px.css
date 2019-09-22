@@ -20,7 +20,12 @@
 
     /*footer*/
     footer {
+        bottom: 0;
         font-size: 14px;
+    }
+
+    footer div{
+        padding: 0px 20px;
     }
 
     /*Home Page Styling*/
