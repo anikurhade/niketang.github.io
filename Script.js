@@ -21,12 +21,12 @@ function NavBarPos() {
             "color": "white"
         });
         $(".toggle").css("filter", "invert(0)");
-        $("ul").mouseleave(function(){
+        $("ul").mouseleave(function () {
             $(".toggle").css("filter", "invert(0)");
         });
     } else {
         $(".toggle").css("filter", "invert(1)");
-        $("ul").mouseleave(function(){
+        $("ul").mouseleave(function () {
             $(".toggle").css("filter", "invert(1)");
         });
         $(".menu").removeClass("sticky");
@@ -60,6 +60,7 @@ function toggle() {
                 "background-color": "transparent",
                 "color": "black"
             });
+            $(".toggle").css("filter", "invert(1)");
             $(".navbar").css("paddingBottom", "25px");
         }
     } else {
@@ -70,6 +71,7 @@ function toggle() {
                 "background-color": "black",
                 "color": "white"
             });
+            $(".toggle").css("filter", "invert(0)");
             $(".navbar").css("paddingBottom", "145px");
         }
     }
