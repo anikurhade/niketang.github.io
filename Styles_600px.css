@@ -176,6 +176,7 @@
     }
 
     div.event_desc {
-        width: calc(60% - 25px);
+        width: calc(60%);
+        margin-left: calc(50% + 12.5px);
     }
 }

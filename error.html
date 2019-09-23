@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="Description" content="Register for events organised by COMeIT Team in Government Polytechnic, Pune">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COMeIT - Home</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="Styles_600px.css" media="screen and (min-width: 600px) and (max-width: 899px)">
+    <link rel="stylesheet" href="Styles_900px.css" media="screen and (min-width: 900px)">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" async defer></script>
+    <script src="Script.js" defer></script>
+    <style>
+        div.error {
+            width: 60%;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            border: 1px solid black;
+            padding: 50px;
+        }
+
+        h4 {
+            padding-top: 10px;
+            font-weight: 500;
+        }
+
+        p {
+            margin-top: 10px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        div.left {
+            float: left;
+            width: 50%;
+        }
+
+        div.right {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            text-align: right;
+            transform: translateY(-50%);
+            font-size: 50px;
+            letter-spacing: 20px;
+        }
+
+        input[type=button] {
+            margin-top: 20px;
+            background-color: black;
+            font-weight: 600;
+            color: white;
+            border: none;
+            transition: 0.2s linear;
+        }
+
+        @media(hover: hover) and (pointer: fine) {
+            input[type=button]:hover {
+                background-color: white;
+                color: black;
+                border: 1px solid black;
+                transition: 0.2s linear;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="menu" id="nav">
+            <li class="logo" onclick="window.location.href = 'index.html';">COMeIT</li>
+            <li class="item" onclick="window.location.href = 'Events.HTML';">Events</li>
+            <li class="item" onclick="window.location.href = 'Main.HTML';">Register</li>
+            <li class="item" onclick="window.location.href = 'ContactUS.HTML';">Contact Us</li>
+            <li class="item" onclick="window.location.href = 'AboutUs.html';">About Us</li>
+            <li class="toggle" onclick="toggle()">
+                <div>
+                    <img alt="Hamburger Menu Icon"
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMTI0IDEyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI0IDEyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnPgoJPHBhdGggZD0iTTExMiw2SDEyQzUuNCw2LDAsMTEuNCwwLDE4czUuNCwxMiwxMiwxMmgxMDBjNi42LDAsMTItNS40LDEyLTEyUzExOC42LDYsMTEyLDZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDUwSDEyQzUuNCw1MCwwLDU1LjQsMCw2MmMwLDYuNiw1LjQsMTIsMTIsMTJoMTAwYzYuNiwwLDEyLTUuNCwxMi0xMkMxMjQsNTUuNCwxMTguNiw1MCwxMTIsNTB6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDk0SDEyYy02LjYsMC0xMiw1LjQtMTIsMTJzNS40LDEyLDEyLDEyaDEwMGM2LjYsMCwxMi01LjQsMTItMTJTMTE4LjYsOTQsMTEyLDk0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                        style="width: 28px" class="habtn">
+                    <img alt="Close Menu Icon"
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMzQ4LjMzMyAzNDguMzM0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDguMzMzIDM0OC4zMzQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48Zz4KCTxwYXRoIGQ9Ik0zMzYuNTU5LDY4LjYxMUwyMzEuMDE2LDE3NC4xNjVsMTA1LjU0MywxMDUuNTQ5YzE1LjY5OSwxNS43MDUsMTUuNjk5LDQxLjE0NSwwLDU2Ljg1ICAgYy03Ljg0NCw3Ljg0NC0xOC4xMjgsMTEuNzY5LTI4LjQwNywxMS43NjljLTEwLjI5NiwwLTIwLjU4MS0zLjkxOS0yOC40MTktMTEuNzY5TDE3NC4xNjcsMjMxLjAwM0w2OC42MDksMzM2LjU2MyAgIGMtNy44NDMsNy44NDQtMTguMTI4LDExLjc2OS0yOC40MTYsMTEuNzY5Yy0xMC4yODUsMC0yMC41NjMtMy45MTktMjguNDEzLTExLjc2OWMtMTUuNjk5LTE1LjY5OC0xNS42OTktNDEuMTM5LDAtNTYuODUgICBsMTA1LjU0LTEwNS41NDlMMTEuNzc0LDY4LjYxMWMtMTUuNjk5LTE1LjY5OS0xNS42OTktNDEuMTQ1LDAtNTYuODQ0YzE1LjY5Ni0xNS42ODcsNDEuMTI3LTE1LjY4Nyw1Ni44MjksMGwxMDUuNTYzLDEwNS41NTQgICBMMjc5LjcyMSwxMS43NjdjMTUuNzA1LTE1LjY4Nyw0MS4xMzktMTUuNjg3LDU2LjgzMiwwQzM1Mi4yNTgsMjcuNDY2LDM1Mi4yNTgsNTIuOTEyLDMzNi41NTksNjguNjExeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                        style="width: 24px;" hidden class="close">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="error">
+        <div class="left">
+            <h2>And that's a 404 !</h2>
+            <h4>Something's probably wrong.</h4>
+            <p>But don't worry. Not all those who wander are lost.<br>You seem to be looking for something, that
+                doesn't actually exist (yet).<br>Maybe you can fix this by returning to the homepage.</p>
+
+            <input type="button" value="Go Back" onclick="window.location.href = './';">
+        </div>
+        <div class="right">
+            <h1>404</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
