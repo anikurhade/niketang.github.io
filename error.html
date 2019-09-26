@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>COMeIT - Home</title>
+    <title>COMeIT - Error</title>
     <link rel="stylesheet" href="Styles.css">
     <link rel="stylesheet" href="Styles_600px.css" media="screen and (min-width: 600px) and (max-width: 899px)">
     <link rel="stylesheet" href="Styles_900px.css" media="screen and (min-width: 900px)">
@@ -14,38 +14,30 @@
     <script src="Script.js" defer></script>
     <style>
         div.error {
-            width: 60%;
+            width: 100%;
             top: 50%;
             left: 50%;
             position: absolute;
             transform: translate(-50%, -50%);
-            border: 1px solid black;
-            padding: 50px;
+            padding: 25px 40px;
         }
 
         h4 {
-            padding-top: 10px;
+            padding-top: 20px;
             font-weight: 500;
         }
 
         p {
-            margin-top: 10px;
+            margin: 15px 0px;
             color: rgba(0, 0, 0, 0.7);
         }
 
         div.left {
-            float: left;
-            width: 50%;
+            width: 100%;
         }
 
         div.right {
-            position: absolute;
-            top: 50%;
-            right: 50px;
-            text-align: right;
-            transform: translateY(-50%);
-            font-size: 50px;
-            letter-spacing: 20px;
+            display: none;
         }
 
         input[type=button] {
@@ -54,6 +46,7 @@
             font-weight: 600;
             color: white;
             border: none;
+            padding: 12px 32px;
             transition: 0.2s linear;
         }
 
@@ -64,6 +57,34 @@
                 border: 1px solid black;
                 transition: 0.2s linear;
                 cursor: pointer;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            div.error {
+                width: 80%;
+                padding: 50px;
+                border: 1px solid rgb(207, 197, 197);
+            }
+
+            div.left {
+                width: 50%;
+            }
+
+            div.right {
+                position: absolute;
+                display: block;
+                top: 50%;
+                right: 50px;
+                text-align: right;
+                transform: translateY(-50%);
+                font-size: 35px;
+                letter-spacing: 20px;
+            }
+        }
+        @media screen and (min-width: 900px){
+            div.error{
+                width: 60%;
             }
         }
     </style>
@@ -89,21 +110,18 @@
             </li>
         </ul>
     </div>
-
     <div class="error">
         <div class="left">
             <h2>And that's a 404 !</h2>
-            <h4>Something's probably wrong.</h4>
-            <p>But don't worry. Not all those who wander are lost.<br>You seem to be looking for something, that
-                doesn't actually exist (yet).<br>Maybe you can fix this by returning to the homepage.</p>
-
+            <h4>You are not supposed to be here.</h4>
+            <p>Something's probably wrong. But don't worry. Not all those who wander are lost.<br>You seem to be looking
+                for something, that doesn't actually exist (yet).<br>You can fix this by returning to the homepage.</p>
             <input type="button" value="Go Back" onclick="window.location.href = './';">
         </div>
         <div class="right">
             <h1>404</h1>
         </div>
     </div>
-
 </body>
 
 </html>

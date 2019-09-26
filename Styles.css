@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
 }
 
@@ -242,12 +241,6 @@ p.social:active {
     color: black;
 }
 
-/*To_Top Button*/
-div#totop {
-    display: none !important;
-    visibility: hidden;
-}
-
 /* Footer */
 footer {
     background-color: #282828;
@@ -270,13 +263,23 @@ div#totop {
     height: 48px;
     position: fixed;
     right: 25px;
-    bottom: 75px;
+    bottom: 100px;
     background-color: #282828;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     cursor: pointer;
     display: none;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out background-color, 0.3s ease-in-out box-shadow;
+    animation: popup 0.25s ease-in-out 1;
+}
+
+@keyframes popup {
+    from{
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 div#totop img {
@@ -430,10 +433,10 @@ div.bgimg img.arrow {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    animation: bounce 2s ease-in-out infinite;
     width: 28px;
     height: 28px;
     filter: blur(0px);
+    animation: bounce 2s ease-in-out infinite;
 }
 
 @keyframes bounce {
@@ -475,20 +478,6 @@ div.landing div.countdown div h4 {
     text-indent: 5px;
     margin-top: 15px;
     font-size: 12px;
-}
-/*Pre-built Styling Classes*/
-.center_block .horizontal {
-    margin-left: 50%;
-    transform: translateY(-50%);
-}
-
-.center_block .vertical {
-    margin-top: 50%;
-    transform: translateY(-50%);
-}
-
-.center_text {
-    text-align: center;
 }
 
 @media(hover: hover) and (pointer: fine) {

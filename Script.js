@@ -4,6 +4,7 @@ window.onload = function load() {
         $('.loader').fadeOut(500);
     }, 100);
 }
+
 window.onscroll = function () {
     NavBarPos();
 }

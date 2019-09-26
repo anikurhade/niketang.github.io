@@ -6,24 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles.css">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" async defer></script>
     <script src="Script.js" defer></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>COMeIT Event Registration</title>
 
     <script lnaguage="javascript" type="text/javascript">
-        function loadform() {
+        $(document).ready(function () {
             selectlist();
             setgrp();
-        }
-        window.onload = function () {
-            loadform();
-            //Preloader
-            setTimeout(() => {
-                $('.loader').fadeOut(500);
-            }, 100);
-        }
+        });
 
         function selectlist() {
             var x, i, j, selElmnt, a, b, c;
@@ -100,7 +93,6 @@
         /*if the user clicks anywhere outside the select box,
         then close all select boxes:*/
         document.addEventListener("click", closeAllSelect);
-
 
         function validate_name() {
             var name = $("#name").val();
@@ -242,7 +234,8 @@
             padding: 40px 25px;
             position: relative;
             top: 100px;
-            box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px;
+            /*box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px;*/
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             transition: 0.3s ease-in-out;
         }
 
@@ -409,7 +402,6 @@
             </div>
         </div>
     </div>
-
     <div class="content">
         <div class="navbar">
             <ul class="menu" id="nav">
@@ -492,14 +484,7 @@
             <input type="button" value="REGISTER" id="registerbtn" class="registerbtn" onclick="validate()"
                 disabled=true>
         </form>
-        <div style="position: relative; top: 150px;">
-            <p class="center">Connect with us</p>
-            <div class="social">
-                <p class="social">Instagram</p>
-                <p class="social">Facebook</p>
-                <p class="social">Twitter
-            </div>
-        </div>
+
         <div id="totop">
             <img alt="Scroll to Top Icon"
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAAAsklEQVR42u3V4Q0BQQCEUQ2gSfo49IauRgiJyP0R5EzufQ3svGQ3u1hIkiRJ0k/KkKF5/i7XWgnZ51Ej4Wl+IyGHvNZEyDZj9RCyzBEBAQEBAQEBAQEBAQEBAQHhwyOmamgHfIuQlBOScgLAjK9Q+SPu+Myyqv6LzTd/xvNP5ptvvvnmvzf/bL75s5y/Nt98882fALCpnn8jDNXzRwht818IjfOfCK3z74Tm+ZIkSZL+ugsexKZhBnZnOgAAAABJRU5ErkJggg=="
