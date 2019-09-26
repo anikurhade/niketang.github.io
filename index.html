@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="Styles.css">
     <link rel="stylesheet" href="Styles_600px.css" media="screen and (min-width: 600px) and (max-width: 899px)">
     <link rel="stylesheet" href="Styles_900px.css" media="screen and (min-width: 900px)">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" async defer></script>
     <script src="Script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" async defer></script>
     <style>
         ul {
             color: white !important;
@@ -20,6 +20,9 @@
         }
     </style>
     <script>
+        $( window ).on("load", function() {
+            set_counter();
+        });
         // Set the date we're counting down to
         var countDownDate = new Date("Jan 1, 2020 09:30:00").getTime();
         // Get today's date and time
@@ -39,7 +42,6 @@
                     clearInterval(x);
                 }
             }
-            $(document).ready(set_counter); 
         // Update the count down every 1 minute
         setInterval( set_counter,1000);
     </script>
