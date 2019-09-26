@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="Description" content="Register for events organised by COMeIT Team in Government Polytechnic, Pune">
     <meta charset="UTF-8">
@@ -15,37 +16,39 @@
         ul {
             color: white !important;
         }
+
         .toggle {
             filter: invert(0) !important;
         }
     </style>
     <script>
-        $( window ).on("load", function() {
-            set_counter();
-        });
+        document.getElementsByClassName("content").onload = set_counter();
+
         // Set the date we're counting down to
         var countDownDate = new Date("Jan 1, 2020 09:30:00").getTime();
         // Get today's date and time
         var now = new Date().getTime();
+
         function set_counter() {
-                // Find the distance between now and the count down date
-                var distance = countDownDate - now;
-                // Time calculations for months, days, hours
-                var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-                var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                $(".months h2").html(months);
-                $(".days h2").html(days);
-                $(".hours h2").html(hours);
-                // If the count down is finished, write some text
-                if (distance < 0) {
-                    clearInterval(x);
-                }
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+            // Time calculations for months, days, hours
+            var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
+            var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            $(".months h2").html(months);
+            $(".days h2").html(days);
+            $(".hours h2").html(hours);
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
             }
+        }
         // Update the count down every 1 minute
-        setInterval( set_counter,1000);
+        setInterval(set_counter, 1000);
     </script>
 </head>
+
 <body>
     <div class="loader">
         <div class="box">
@@ -68,9 +71,11 @@
                 <li class="item" onclick="window.location.href = 'AboutUs.html';">About Us</li>
                 <li class="toggle" onclick="toggle()">
                     <div>
-                        <img alt="Hamburger Menu Icon"  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMTI0IDEyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI0IDEyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnPgoJPHBhdGggZD0iTTExMiw2SDEyQzUuNCw2LDAsMTEuNCwwLDE4czUuNCwxMiwxMiwxMmgxMDBjNi42LDAsMTItNS40LDEyLTEyUzExOC42LDYsMTEyLDZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDUwSDEyQzUuNCw1MCwwLDU1LjQsMCw2MmMwLDYuNiw1LjQsMTIsMTIsMTJoMTAwYzYuNiwwLDEyLTUuNCwxMi0xMkMxMjQsNTUuNCwxMTguNiw1MCwxMTIsNTB6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDk0SDEyYy02LjYsMC0xMiw1LjQtMTIsMTJzNS40LDEyLDEyLDEyaDEwMGM2LjYsMCwxMi01LjQsMTItMTJTMTE4LjYsOTQsMTEyLDk0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                        <img alt="Hamburger Menu Icon"
+                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMTI0IDEyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI0IDEyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnPgoJPHBhdGggZD0iTTExMiw2SDEyQzUuNCw2LDAsMTEuNCwwLDE4czUuNCwxMiwxMiwxMmgxMDBjNi42LDAsMTItNS40LDEyLTEyUzExOC42LDYsMTEyLDZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDUwSDEyQzUuNCw1MCwwLDU1LjQsMCw2MmMwLDYuNiw1LjQsMTIsMTIsMTJoMTAwYzYuNiwwLDEyLTUuNCwxMi0xMkMxMjQsNTUuNCwxMTguNiw1MCwxMTIsNTB6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTEyLDk0SDEyYy02LjYsMC0xMiw1LjQtMTIsMTJzNS40LDEyLDEyLDEyaDEwMGM2LjYsMCwxMi01LjQsMTItMTJTMTE4LjYsOTQsMTEyLDk0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
                             style="width: 28px" class="habtn">
-                        <img alt="Close Menu Icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMzQ4LjMzMyAzNDguMzM0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDguMzMzIDM0OC4zMzQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48Zz4KCTxwYXRoIGQ9Ik0zMzYuNTU5LDY4LjYxMUwyMzEuMDE2LDE3NC4xNjVsMTA1LjU0MywxMDUuNTQ5YzE1LjY5OSwxNS43MDUsMTUuNjk5LDQxLjE0NSwwLDU2Ljg1ICAgYy03Ljg0NCw3Ljg0NC0xOC4xMjgsMTEuNzY5LTI4LjQwNywxMS43NjljLTEwLjI5NiwwLTIwLjU4MS0zLjkxOS0yOC40MTktMTEuNzY5TDE3NC4xNjcsMjMxLjAwM0w2OC42MDksMzM2LjU2MyAgIGMtNy44NDMsNy44NDQtMTguMTI4LDExLjc2OS0yOC40MTYsMTEuNzY5Yy0xMC4yODUsMC0yMC41NjMtMy45MTktMjguNDEzLTExLjc2OWMtMTUuNjk5LTE1LjY5OC0xNS42OTktNDEuMTM5LDAtNTYuODUgICBsMTA1LjU0LTEwNS41NDlMMTEuNzc0LDY4LjYxMWMtMTUuNjk5LTE1LjY5OS0xNS42OTktNDEuMTQ1LDAtNTYuODQ0YzE1LjY5Ni0xNS42ODcsNDEuMTI3LTE1LjY4Nyw1Ni44MjksMGwxMDUuNTYzLDEwNS41NTQgICBMMjc5LjcyMSwxMS43NjdjMTUuNzA1LTE1LjY4Nyw0MS4xMzktMTUuNjg3LDU2LjgzMiwwQzM1Mi4yNTgsMjcuNDY2LDM1Mi4yNTgsNTIuOTEyLDMzNi41NTksNjguNjExeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
+                        <img alt="Close Menu Icon"
+                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMzQ4LjMzMyAzNDguMzM0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDguMzMzIDM0OC4zMzQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48Zz4KCTxwYXRoIGQ9Ik0zMzYuNTU5LDY4LjYxMUwyMzEuMDE2LDE3NC4xNjVsMTA1LjU0MywxMDUuNTQ5YzE1LjY5OSwxNS43MDUsMTUuNjk5LDQxLjE0NSwwLDU2Ljg1ICAgYy03Ljg0NCw3Ljg0NC0xOC4xMjgsMTEuNzY5LTI4LjQwNywxMS43NjljLTEwLjI5NiwwLTIwLjU4MS0zLjkxOS0yOC40MTktMTEuNzY5TDE3NC4xNjcsMjMxLjAwM0w2OC42MDksMzM2LjU2MyAgIGMtNy44NDMsNy44NDQtMTguMTI4LDExLjc2OS0yOC40MTYsMTEuNzY5Yy0xMC4yODUsMC0yMC41NjMtMy45MTktMjguNDEzLTExLjc2OWMtMTUuNjk5LTE1LjY5OC0xNS42OTktNDEuMTM5LDAtNTYuODUgICBsMTA1LjU0LTEwNS41NDlMMTEuNzc0LDY4LjYxMWMtMTUuNjk5LTE1LjY5OS0xNS42OTktNDEuMTQ1LDAtNTYuODQ0YzE1LjY5Ni0xNS42ODcsNDEuMTI3LTE1LjY4Nyw1Ni44MjksMGwxMDUuNTYzLDEwNS41NTQgICBMMjc5LjcyMSwxMS43NjdjMTUuNzA1LTE1LjY4Nyw0MS4xMzktMTUuNjg3LDU2LjgzMiwwQzM1Mi4yNTgsMjcuNDY2LDM1Mi4yNTgsNTIuOTEyLDMzNi41NTksNjguNjExeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K"
                             style="width: 24px;" hidden class="close">
                     </div>
                 </li>
@@ -103,7 +108,7 @@
     </div>
 
     <div class="parallax">
-        <div class="parallax_img" alt="Parallax Background Image" ></div>
+        <div class="parallax_img" alt="Parallax Background Image"></div>
         <div class="parallax_text">
             <h2>HEADING</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nostrum consectetur eos? Veniam repellat
@@ -134,18 +139,21 @@
         </div>
     </div>
 
-<div id="totop">
-        <img alt="Scroll to Top Icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAAAsklEQVR42u3V4Q0BQQCEUQ2gSfo49IauRgiJyP0R5EzufQ3svGQ3u1hIkiRJ0k/KkKF5/i7XWgnZ51Ej4Wl+IyGHvNZEyDZj9RCyzBEBAQEBAQEBAQEBAQEBAQHhwyOmamgHfIuQlBOScgLAjK9Q+SPu+Myyqv6LzTd/xvNP5ptvvvnmvzf/bL75s5y/Nt98882fALCpnn8jDNXzRwht818IjfOfCK3z74Tm+ZIkSZL+ugsexKZhBnZnOgAAAABJRU5ErkJggg=="
+    <div id="totop">
+        <img alt="Scroll to Top Icon"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAAAsklEQVR42u3V4Q0BQQCEUQ2gSfo49IauRgiJyP0R5EzufQ3svGQ3u1hIkiRJ0k/KkKF5/i7XWgnZ51Ej4Wl+IyGHvNZEyDZj9RCyzBEBAQEBAQEBAQEBAQEBAQHhwyOmamgHfIuQlBOScgLAjK9Q+SPu+Myyqv6LzTd/xvNP5ptvvvnmvzf/bL75s5y/Nt98882fALCpnn8jDNXzRwht818IjfOfCK3z74Tm+ZIkSZL+ugsexKZhBnZnOgAAAABJRU5ErkJggg=="
             onclick="window.scrollTo(0, 0);" />
     </div>
 
     <footer>
-            <div id="Copyright">Designed by <a href="https://www.instagram.com/nikketan" target="_blank" rel="noopener">Niketan Gulekar</a> for COMeIT, Government Polytechnic Pune. Copyright © 2019 All rights reserved.<br>Icons made by <a
-                href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp" target="_blank" rel="noopener">Eucalyp</a> from <a
-                href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noopener">www.flaticon.com</a></div>
-        </footer>
+        <div id="Copyright">Designed by <a href="https://www.instagram.com/nikketan" target="_blank"
+                rel="noopener">Niketan Gulekar</a> for COMeIT, Government Polytechnic Pune. Copyright © 2019 All rights
+            reserved.<br>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp"
+                target="_blank" rel="noopener">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"
+                target="_blank" rel="noopener">www.flaticon.com</a></div>
+    </footer>
 
-</div>
+    </div>
 </body>
 
 </html>

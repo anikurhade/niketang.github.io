@@ -269,6 +269,7 @@ div#totop {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     cursor: pointer;
     display: none;
+    visibility: hidden;
     transition: 0.3s ease-in-out background-color, 0.3s ease-in-out box-shadow;
     animation: popup 0.25s ease-in-out 1;
 }
