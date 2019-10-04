@@ -141,13 +141,12 @@ ul:active {
 }
 
 .logo {
-    padding: 15px 0px;
+    padding: 25px 0 15px 0;
     transition: 0.2s linear;
     line-height: 80px;
-    padding-top: 20px;
     font-size: 25px;
     font-weight: 500;
-    margin-left: 50px;
+    margin: 0 0 0 10px;
 }
 
 /* Mobile menu */
@@ -159,11 +158,11 @@ ul:active {
 }
 
 .menu .item {
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
 }
 
 .toggle {
-    margin-right: 200px;
+    margin: 0 200px 0 0;
     cursor: pointer;
     order: 1;
     margin-right: 50px;
@@ -172,13 +171,12 @@ ul:active {
 }
 
 .item {
-    width: calc(100% - 100px);
+    width: calc(100% - 40px);
     order: 3;
     display: none;
     padding: 15px 10px !important;
     cursor: pointer;
     transition: 0.2s linear;
-    margin-left: 50px;
 }
 
 .item:active {
@@ -228,7 +226,7 @@ div.connect {
     height: 30px;
     padding: 15px 10px 10px 10px;
     /*Top Right Bottom Left*/
-    margin: 50px 0px 25px 0px;
+    margin: 50px 0 25px 0;
     transition: 0.2s color linear, 0.2s color linear;
     color: rgb(185, 185, 185);
 }
@@ -249,7 +247,7 @@ footer {
     height: 60px;
     display: table;
     top: 200px;
-    bottom: 0px;
+    bottom: 0;
     position: relative;
     text-align: center;
     padding: 25px 10px;
@@ -328,13 +326,16 @@ div.stats h2 {
 }
 
 .stats div h3 {
-    margin: 25px 0px 10px 0px;
+    margin: 25px 0 10px 0;
     font-size: 14px;
 }
 
 .stats div h3::after {
-    content: '\002B';
+    content: ' \002B';
     color: #777;
+}
+.stats div:nth-of-type(2) h3::before{
+    content: "₹ ";
 }
 
 .stats div p {
@@ -416,13 +417,13 @@ div.bgimg h3 {
 }
 
 div.bgimg h1 {
-    margin: 20px 10px 0px 10px;
+    margin: 20px 10px 0 10px;
     letter-spacing: 10px;
     font-size: 20px;
 }
 
 div.bgimg p {
-    margin: 20px 0px 0px 50%;
+    margin: 20px 0 0 50%;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.7);
     width: 85% !important;
@@ -436,7 +437,7 @@ div.bgimg img.arrow {
     transform: translate(-50%, 0%);
     width: 28px;
     height: 28px;
-    filter: blur(0px);
+    filter: blur(0);
     animation: bounce 2s ease-in-out infinite;
 }
 
@@ -503,7 +504,7 @@ div.landing div.countdown div h4 {
     }
 
     div.col img:hover {
-        filter: blur(0px);
+        filter: blur(0);
         cursor: pointer;
     }
 

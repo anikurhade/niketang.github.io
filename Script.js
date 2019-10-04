@@ -4,11 +4,21 @@ window.onload = function load() {
     setTimeout(() => {
         $('.loader').fadeOut(500);
     }, 100);
-}
+};
 
 window.onscroll = function () {
     NavBarPos();
-}
+};
+
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+  
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+  
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
 
 function NavBarPos() {
     if (Math.max(document.body.scrollTop, window.pageYOffset) >= 60) {
